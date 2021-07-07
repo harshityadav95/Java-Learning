@@ -31,7 +31,13 @@
 
 ### What is Inversion of Control  \(IoC\) ?
 
-A process by which  objects define their dependencies and an external container injects those dependencies into the object  
+A process by which  objects define their dependencies and an external container injects those dependencies into the object  , the object need to worry where it dependcies are coming from 
+
+#### Spring Modules
+
+ 
+
+![](.gitbook/assets/image%20%281%29.png)
 
  
 
