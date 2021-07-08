@@ -164,6 +164,9 @@ Servlets --&gt; JSP --&gt; JSTL  \(collection of useful JSP tags for common task
 
 * Java ServerPages are an abstraction on top of servlets
 * JSP scriptlet is a basic unit -enclosed in tags &lt;% ......%&gt;
+* JSP scriptlet will be injected into a servlet at runtime
+* Servlet corresponding to JSP scriptlet will be cached and re-used until JSP is modified
+* JSP Compiler is needed to compile JSP scriplets to servlet
 * 
 
 
