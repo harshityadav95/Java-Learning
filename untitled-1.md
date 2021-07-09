@@ -167,6 +167,24 @@ Servlets --&gt; JSP --&gt; JSTL  \(collection of useful JSP tags for common task
 * JSP scriptlet will be injected into a servlet at runtime
 * Servlet corresponding to JSP scriptlet will be cached and re-used until JSP is modified
 * JSP Compiler is needed to compile JSP scriplets to servlet
+* JSP compiler runs on java enabled web app or server
+* Servlet code runs inside JVM on web server
+* JSP allows Java code and HTML to be interleaved
+
+#### JSP Standard Tag Library aka JSTL
+
+* Sciptlet tags are basic building blocks of JSP
+* JSTL is a standard library for JSP tags
+* Taglibs contains core funationality of JSTL
+* Taglibs ship with every servlet and JSP framework
+
+#### JSTL Tag Classification  
+
+* JSTL Core : loops , control flow ,&lt;div&gt; output
+* JSTL Formatting : dates, internationalization
+* JSTL SQL : use usually discouraged \(security\)
+* JSTL XML : working with XML documents
+* JSTL functions : mainly string manipulation 
 * 
 
 
