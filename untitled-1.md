@@ -185,7 +185,13 @@ Servlets --&gt; JSP --&gt; JSTL  \(collection of useful JSP tags for common task
 * JSTL SQL : use usually discouraged \(security\)
 * JSTL XML : working with XML documents
 * JSTL functions : mainly string manipulation 
-* 
+
+### Model View Controller
+
+Dispatcher Servlet as front controller to recieve browser requests
+
+
+
 
 
 
