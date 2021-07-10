@@ -199,40 +199,29 @@ Servlets --&gt; JSP --&gt; JSTL  \(collection of useful JSP tags for common task
 * Controller - Dispatcher Servlet
 * useful for classic 3 tier architecture
 
-![](.gitbook/assets/image%20%285%29.png)
+![](.gitbook/assets/image%20%289%29.png)
 
+#### Role of Dispatcher Servlet
 
+* Dispatcher Servlet aka Spring Controller is a front controller
+* Every web requests comes to this controller
+* Request handler controller ,view  resolver, annotations play a role
+* Request is then passed onto a actual handler
 
+![](.gitbook/assets/image%20%287%29.png)
 
+![](.gitbook/assets/image%20%288%29.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](.gitbook/assets/screenshot-from-2021-07-10-20-56-59.png)
 
 
 
 ### Reference  
 
 *  [https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html](https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html)
-* 
+
+
+
 
 
 
