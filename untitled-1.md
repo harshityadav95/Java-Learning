@@ -188,7 +188,24 @@ Servlets --&gt; JSP --&gt; JSTL  \(collection of useful JSP tags for common task
 
 ### Model View Controller
 
-Dispatcher Servlet as front controller to recieve browser requests
+* Dispatcher Servlet as front controller to recieve browser requests
+* Dispatched to appropriate controller via handler mappings
+* Result returned to user via ViewResolver Classes
+
+#### Typical Spring MVC App
+
+* Model - Pojo  \(Plain old java object\)
+* Views - JSP templates written with JSTL
+* Controller - Dispatcher Servlet
+* useful for classic 3 tier architecture
+
+![](.gitbook/assets/image%20%285%29.png)
+
+
+
+
+
+
 
 
 
