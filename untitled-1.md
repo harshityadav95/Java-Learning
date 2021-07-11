@@ -6,9 +6,7 @@
 * Service Layer
 * Presentation Layer 
 
-
-
-## Spring Boot  
+## Spring Boot
 
 * Inversion of Control 
 * Dependency Injection 
@@ -31,7 +29,7 @@
 
 ### What is Inversion of Control  \(IoC\) ?
 
-A process by which  objects define their dependencies and an external container injects those dependencies into the object  , the object need to worry where it dependencies are coming from 
+A process by which objects define their dependencies and an external container injects those dependencies into the object , the object need to worry where it dependencies are coming from
 
 #### Spring Modules
 
@@ -48,7 +46,7 @@ A process by which  objects define their dependencies and an external container 
 * spring-context for access to objects in JNDI \(Java Naming and Directory Interface\) registry style
 * spring-expression for working with object at runtime
 
-#### 2. Data Access and Integration 
+#### 2. Data Access and Integration
 
 * spring-jdbc abstracts away vendor specific error codes and handling
 * spring-orm for working with Java-Persistance API \(JPA\) , Hibernate and other ORM API's
@@ -57,7 +55,7 @@ A process by which  objects define their dependencies and an external container 
 
 #### 3.Messaging
 
-*  spring-messaging module
+* spring-messaging module
 * Message, MessageChannel and MessageHandler abstraction
 * Annotations for mapping messages to methods
 * Similar to Spring MVC annotation based programming
@@ -68,8 +66,6 @@ A process by which  objects define their dependencies and an external container 
 * spring-web for basic web features eg, servelet listeners , HTTP client
 * spring-webmvc for web application programming  using MVC paradigm
 * spring-websockets as thin lightweight layer above TCP
-
-
 
 #### \(AOP\) Aspect Oriented Programming
 
@@ -83,7 +79,7 @@ A process by which  objects define their dependencies and an external container 
 * Implement aspects with @Aspect annotation
 * Spring AOP modules helps combine OOP with AOP
 
-#### 5. Testing 
+#### 5. Testing
 
 * Unit-testing as well as integration testing 
 * Junit or TestNG
@@ -127,24 +123,24 @@ Dependency management specify what JAR \(java archives \) and libraries our proj
 * Updates application state only via model \(not directly\)
 * Updates views once application state has changed
 
-#### Views 
+#### Views
 
 * Present application state to users via appropriate interface
 * Allow users to interact with state  , modify state
 * Do not store application data \(except for caching\)
 * Built using reusable and configurable element
 
-Each component when updated notify the listener via Synchronous methods  vs. Asynchronous events
+Each component when updated notify the listener via Synchronous methods vs. Asynchronous events
 
 ### Spring MVC Framework
 
-Spring framework relies on three underlying technlogies 
+Spring framework relies on three underlying technlogies
 
 * Servlets
 * JSP \(Java Server Pages\)
 * JSTL \(Java Pages standard tag library\)
 
-Servlets --&gt; JSP --&gt; JSTL  \(collection of useful JSP tags for common tasks\)
+Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks\)
 
 #### Servlets
 
@@ -178,7 +174,7 @@ Servlets --&gt; JSP --&gt; JSTL  \(collection of useful JSP tags for common task
 * Taglibs contains core funationality of JSTL
 * Taglibs ship with every servlet and JSP framework
 
-#### JSTL Tag Classification  
+#### JSTL Tag Classification
 
 * JSTL Core : loops , control flow ,&lt;div&gt; output
 * JSTL Formatting : dates, internationalization
@@ -199,40 +195,48 @@ Servlets --&gt; JSP --&gt; JSTL  \(collection of useful JSP tags for common task
 * Controller - Dispatcher Servlet
 * useful for classic 3 tier architecture
 
-![](.gitbook/assets/image%20%289%29.png)
+![](.gitbook/assets/image%20%285%29.png)
 
-#### Role of Dispatcher Servlet
+### Maven
 
-* Dispatcher Servlet aka Spring Controller is a front controller
-* Every web requests comes to this controller
-* Request handler controller ,view  resolver, annotations play a role
-* Request is then passed onto a actual handler
+*  Article  :
+* POM - Project object Model
+* war file -  web archive files
 
-![](.gitbook/assets/image%20%287%29.png)
+```text
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>in.harshityadav</groupId>
+  <artifactId>mavenlearner</artifactId>
+  
+  <packaging>war</packaging>
+  
+  <version>0.0.1-SNAPSHOT</version>
+  <name>mavenlearner Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <dependencies>
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+  </dependencies>
+  
+  
+  <build>
+    <finalName>mavenlearner</finalName>
+  </build>
+</project>
 
-![](.gitbook/assets/image%20%288%29.png)
+```
 
-![](.gitbook/assets/screenshot-from-2021-07-10-20-56-59.png)
+### Reference
 
-
-
-### Reference  
-
-*  [https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html](https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
+* [https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html](https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html)
+* 
