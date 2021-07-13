@@ -239,4 +239,5 @@ Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks
 ### Reference
 
 * [https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html](https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html)
-* 
+* [https://medium.com/engineering-zemoso/when-not-to-autowire-in-spring-spring-boot-93e6a01cb793](https://medium.com/engineering-zemoso/when-not-to-autowire-in-spring-spring-boot-93e6a01cb793)
+
