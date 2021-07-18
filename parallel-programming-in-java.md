@@ -1,5 +1,11 @@
 # Parallel Programming in Java
 
+Course taught by Vivek Sarkar. , Rice University 
+
+
+
+### Parallel Programming in Java
+
 
 
 
