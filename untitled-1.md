@@ -236,7 +236,41 @@ Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks
 
 ```
 
-### 
+### Questions 
+
+#### What is Spring Beans   ?
+
+Objects whose lifecycle is entirely managed by Spring Not selected Correct answer.
+
+#### Which techniques using Spring will achieve inversion of control?
+
+* Dependency Injection
+* Factory Pattern
+* Server Locator patter
+
+#### What is Aspect oriented programming  ?
+
+* Adding functionality to existing code without changing the code itself
+
+#### Which dependency management systems can be used with Spring?
+
+* Gradle  
+* Maven 
+* Ivy
+
+#### Model - Responsible for holding and updating application state
+
+#### View  - Responsible for presenting application state to the user
+
+#### Controller  -  Holds the business logic of the application
+
+#### What is the front controller in Spring MVC called?
+
+* Dispatcher Servlet
+
+
+
+
 
 ### Reference
 
