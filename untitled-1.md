@@ -271,20 +271,6 @@ Objects whose lifecycle is entirely managed by Spring Not selected Correct answe
 ### Exercise to Self Learn and Practise  :
 
 * Create a Simple Spring Application using STS
-* Create a Controller using Spring
-* Create a REST Controller with GET Method
-* Create a REST Controller with POST Method  
-* Use REST Template to access the endpoint 
-
-### Questions 
-
-What annotation must be specified for the public class of your application to include Spring Boot? -  @SpringBootApplication
-
-* Dev Tools  
-* Cache Disabling  
-* Live Reload 
-
-
 
 
 
