@@ -268,6 +268,10 @@ Objects whose lifecycle is entirely managed by Spring Not selected Correct answe
 
 * Dispatcher Servlet
 
+### Exercise to Self Learn and Practise  :
+
+* Create a Simple Spring Application using STS
+
 
 
 
