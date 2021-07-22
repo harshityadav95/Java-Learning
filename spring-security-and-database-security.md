@@ -37,7 +37,46 @@ The Spring Security project gives us a rich framework for adding security to our
 </security:http>
 ```
 
-\_\_
+### Add Dependencies 
 
-\_\_
+```text
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-web</artifactId>
+</dependency>
+
+
+<dependency>
+<groupId>org.springframework.security</groupId>
+<artifactId>spring-security-config</artifactId>
+</dependency>
+
+```
+
+Add the spring security framework in the pom.xml  or add it from the manage dependencies.
+
+### Dependency Management 
+
+```text
+<dependencyManagement>
+	<dependencies>
+		<dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-framework-bom</artifactId>
+<version>4.0.6.RELEASE</version>
+<type>pom</type>
+<scope>import</scope>
+</dependency>
+</dependencies>
+</dependencyManagement>
+```
+
+### Dependency vs Dependency Management 
+
+In the parent POM, the main difference between the **`<dependencies>`** and **`<dependencyManagement>`** is this:
+
+* Artifacts specified in the **`<dependencies>`** section will ALWAYS be included as a dependency of the child module\(s\).
+* Artifacts specified in the **`<dependencyManagement>`** section, will only be included in the child module if they were also specified in the **`<dependencies>`** section of the child module itself. Why is it good you ask? Because you specify the version and/or scope in the parent, and you can leave them out when specifying the transitive dependencies in the child POM. This can help you use unified versions for dependencies for child modules, without specifying the version in each child module.
+
+
 
