@@ -377,7 +377,31 @@ http://www.springframework.org/schema/beans http://www.springframework...
 
 ### Using HTTP Basic Authentication  
 
-* Heading on to URL for the application will be prompted with the default layout of the login page
+* Heading on to URL for the application will be prompted with the default layout of the login page from "auto config"
+* Now to add the  basic HTTP security to the previous config  
+
+```text
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:security="http://www.springframework.org/schema/security"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www...
+http://www.springframework.org/schema/beans http://www.springframework...
+<security:http auto-config="true">
+<security:intercept-url pattern="/**" access="ROLE_USER"/>
+
+</security:http>
+
+<security:authentication-manager>
+<security:authentication-provider>
+<security:user-service>
+<Security:user name="ANDY" password="1234567" authorities="ROLE_USER"/>
+<security:user name="ANN" password="7654321" authorities="ROLE_TRIAL_USER"/>
+</security:user- service>
+</security:authentication-provider>
+</security:authentication-manager>
+</beans>
+```
 
 ###  __
 
