@@ -148,7 +148,7 @@ Add the Filter Mapping
 
 #### Creating an XML Application Context for Spring Security  
 
-Addint Context Loader Listener 
+Adding Context Loader Listener 
 
 ```text
 <listener>
