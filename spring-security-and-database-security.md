@@ -78,5 +78,79 @@ In the parent POM, the main difference between the **`<dependencies>`** and **`<
 * Artifacts specified in the **`<dependencies>`** section will ALWAYS be included as a dependency of the child module\(s\).
 * Artifacts specified in the **`<dependencyManagement>`** section, will only be included in the child module if they were also specified in the **`<dependencies>`** section of the child module itself. Why is it good you ask? Because you specify the version and/or scope in the parent, and you can leave them out when specifying the transitive dependencies in the child POM. This can help you use unified versions for dependencies for child modules, without specifying the version in each child module.
 
+### Security Setup Web.xml 
+
+* MVC applications, are taking advantage of Java servlets.
+* Controller in a Spring web MVC Application is`DispatcherServlet`.
+
+### Dispatcher Servlet 
+
+* `DispatcherServlet` is sub classing the HTTP `servlet` class.
+* `DispatcherServlet` is basically prepared to handle all the HTTP requests that comes into the application. 
+* Spring security was built in such a way that it takes advantage of filters.
+
+### Filters
+
+* we can use a filter to intercept HTTP requests before they actually arrive at the `DispatcherServlet` and that gives us an entry point for implementing security
+
+#### Setting up an Filter
+
+Goto \(_/main/webapp/WEB-INF/web.xml_\) and add the following code for the dispatcher servlet  
+
+```text
+<servlet>
+<servlet-name>MySpringSecurityDemoApp</servlet-name>
+<servlet-class>org.springframework.web.servlet.DispatcherServlet</ servlet-class>
+<init-param>
+
+
+// loading the security config XML from a location
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/config/myDemoApp-servletConfig.xml</param--value>
+</init-param>
+</servlet>
+```
+
+and URL Mapping 
+
+```text
+<servlet-mapping>
+<servlet-name>MySpringSecurityDemoApp</servlet-name>
+<url-pattern>/</url-pattern>
+</servlet-mapping>
+```
+
+_enters the following code below &lt;/servlet-mapping&gt;:_  
+
+```text
+<filter>
+<filter-name>springSecurityFilterChain</filter-name>
+<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+</filter>
+```
+
+Add the Filter Mapping
+
+```text
+<filter-mapping>
+<filter-name>springSecurityFilterChain</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+```
+
+#### Creating an XML Application Context for Spring Security  
+
+Addint Context Loader Listener 
+
+```text
+<listener>
+<listener-class>org.springframework.web.context.Context LoaderListener</
+</listener>
+
+
+```
+
+
+
 
 
