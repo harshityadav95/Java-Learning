@@ -143,7 +143,7 @@ Add the Filter Mapping
 <filter-mapping>
 <filter-name>springSecurityFilterChain</filter-name>
 <url-pattern>/*</url-pattern>
-</filter-mapping>
+</filter-mapping
 ```
 
 #### Creating an XML Application Context for Spring Security  
@@ -154,8 +154,6 @@ Adding Context Loader Listener
 <listener>
 <listener-class>org.springframework.web.context.Context LoaderListener</
 </listener>
-
-
 ```
 
 
