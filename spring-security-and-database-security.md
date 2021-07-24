@@ -78,16 +78,24 @@ In the parent POM, the main difference between the **`<dependencies>`** and **`<
 * Artifacts specified in the **`<dependencies>`** section will ALWAYS be included as a dependency of the child module\(s\).
 * Artifacts specified in the **`<dependencyManagement>`** section, will only be included in the child module if they were also specified in the **`<dependencies>`** section of the child module itself. Why is it good you ask? Because you specify the version and/or scope in the parent, and you can leave them out when specifying the transitive dependencies in the child POM. This can help you use unified versions for dependencies for child modules, without specifying the version in each child module.
 
-### Security Setup Web.xml 
+![](.gitbook/assets/image%20%2811%29.png)
+
+Link 1 : [Documentation](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
 
 * MVC applications, are taking advantage of Java servlets.
 * Controller in a Spring web MVC Application is`DispatcherServlet`.
 
+Link 2 : [Article ](https://jainamit333.wordpress.com/2017/08/05/difference-between-dependency-management-and-dependencies-in-maven/)
+
 ### Dispatcher Servlet 
+
+
 
 * `DispatcherServlet` is sub classing the HTTP `servlet` class.
 * `DispatcherServlet` is basically prepared to handle all the HTTP requests that comes into the application. 
 * Spring security was built in such a way that it takes advantage of filters.
+
+
 
 ### Filters
 
