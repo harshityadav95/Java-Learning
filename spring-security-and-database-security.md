@@ -101,7 +101,9 @@ Link 2 : [Article ](https://jainamit333.wordpress.com/2017/08/05/difference-betw
 
 * we can use a filter to intercept HTTP requests before they actually arrive at the `DispatcherServlet` and that gives us an entry point for implementing security
 
-#### Setting up an Filter
+### XML Application Context for Spring Security
+
+#### Setting up an Filter \(web.xml\)
 
 Goto \(_/main/webapp/WEB-INF/web.xml_\) and add the following code for the dispatcher servlet  
 
@@ -146,7 +148,7 @@ Add the Filter Mapping
 </filter-mapping
 ```
 
-#### Creating an XML Application Context for Spring Security  
+#### Creating an XML Application Context for Spring Security   \(web.xml\)
 
 Adding Context Loader Listener 
 
@@ -156,7 +158,226 @@ Adding Context Loader Listener
 </listener>
 ```
 
+#### Add Context Param  \(web.xml\)
+
+```text
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>
+/WEB-INF/config/myDemoApp-appConfig.xml
+</param-value>
+</context-param>
+```
+
+Finally web.xml will look like this 
+
+```text
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com,
+version= "3.0">
+
+<display-name>My Spring Security Demo App</display-name>
+
+<servlet>
+<servlet - name >MySpringSecurityDemoApp</servlet- name>
+<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-name>
+<init-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/çonfig/myDemoApp-servletConfig.xml</param-value>
+</init-param>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>MySpringSecurityDemoApp</servlet-name>
+<url-pattern>/</url-pattern>
+</servlet-mapping>
+
+<listener>
+<listener-class>org.springframework.web.context.Context LoaderListener</listener-class>
+</listener>
+
+<filter>
+<filter-name>springSecurityFilterChain</filter-name>
+<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+</filter>
+
+<filter-mapping>
+<filter-name>springSecurityFilterChain</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<listener>
+<listener-class>org.springframework.web.context.Context LoaderListener</
+</listener>
+
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>
+/WEB-INF/config/myDemoApp-appConfig.xml
+</param-value>
+</context-param>
+
+```
+
+Now for the Context Param defined 
+
+#### Define Data Source at  "myDemoApp-appConfig.xml"
+
+The file will look something like this  
+
+```text
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.
+http://www.springframework.org/schema/context http://www.springframework
+
+<bean id="myBasicDataSource" class="org.springframework.jdbc.datasource.Dri
+<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+<property name="url" value="jdbc:mysql://Localhost:3306/springdemodb" />
+<property name="username" value="admin"/>
+<property name="password" value="admin"/>
+</bean>
+
+</beans>
+```
+
+Now to create the filter we defined in web.xml to provide the actual security define another &lt;param-value &gt;
+
+```text
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>
+
+/WEB-INF/config/myDemoApp-appConfig.xml
+/WEB-INF/config/myDemoApp-securityConfig.xml
 
 
+</param-value>
+</context-param>
 
+```
+
+in config folder create another  Spring Bean Configuration file for the "myDemoApp-securityConfig.xml"
+
+After the File has been created  
+
+* go to my **Namespaces** tab here at the bottom and I am going to check the security namespace; and then **Save** the file.
+* Now go back to the **Source**, you can see now I have my `security` namespace set up. 
+* Start providing configuration information from within this application context.
+
+Now you can start providing security configuration from bean  
+
+### Spring Security in Memory Authentication  
+
+go to my **Namespaces** tab here at the bottom and I am going to check the security namespace; and then I am going to **Save** this file. And if I now go back to the **Source**, you can see now I have my `security` namespace set up. Now I can actually go ahead and start providing configuration information from within this application context.
+
+New Web.xml 
+
+```text
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com...version= "3.0">
+<display-name>My Spring Security Demo App</display-name>
+<servlet>
+<servlet-name >MySpringSecurityDemoApp</servlet-name>
+<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+<init-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/çonfig/myDemoApp-servletConfig.xml</param-value>
+</init-param>
+</servlet>
+<servlet-mapping>
+<servlet-name>MySpringSecurityDemoApp</servlet-name>
+<url-pattern>/</url-pattern>
+</servlet-mapping>
+<listener>
+<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+  <filter>  
+   <filter-name>springSecurityFilterChain</filter-name> 
+   <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class> 
+  </filter> 
+  <filter-mapping> 
+   <filter-name>springSecurityFilterChain</filter-name> -->
+  <url-pattern>/*</urlpattern> 
+  </filter-mapping>
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>
+   /WEB-INF/config/myDemoApp-securityConfig.xml 
+/WEB-INF/config/myDemoApp-appConfig.xml
+</param-value>
+</context-param>
+```
+
+same as that of web.xml security 
+
+####  myDemoApp-appConfig.xml
+
+```text
+< ?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:security="http://www.springframework.org/schema/security"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www...
+http://www.springframework.org/schema/beans http://www.springframework...
+
+<security:http auto-config="true">
+<security:intercept-url pattern="/**" access="ROLE_USER"/>
+</security:http>
+
+
+</beans>
+```
+
+ 
+
+* using the `http` tag coming from the `security` namespace. 
+* tag basically serves as a container for us to provide some HTTP security configuration information.
+* `auto-config` attribute to `"true"`. 
+* just accepting some default configuration including a very simple login form page , default . 
+* `In http` tag  setting up an `intercept-url`,setting up a `pattern` , the `pattern` attribute to `"/**"` and that basically means to intercept everything.
+* `access` attribute here to `"ROLE_USER"`. And the effect of this entire line here, this `intercept-url` tag is we're only going to allow access to our application for authenticated users who have a role of user or a role of `"ROLE_USER"` 
+
+####  In-Memory authentication,
+
+* `authentication-manager;`
+
+```text
+< ?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:security="http://www.springframework.org/schema/security"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www...
+http://www.springframework.org/schema/beans http://www.springframework...
+
+<security:http auto-config="true">
+<security:intercept-url pattern="/**" access="ROLE_USER"/>
+</security:http>
+
+<security:authentication-manager>
+<security:authentication-provider>
+<security:user-service>
+<security:user name="ANDY" password="1234567" authorities="ROLE_USER"/>
+<security:user name="ANN" password="7654321" authorities="ROLE_TRIAL_USER"/>
+</security:user- service>
+</security:authentication-provider>
+</security:authentication-manager>
+
+
+</beans>
+```
+
+* Heading on to URL for the application will be prompted with the default layout of the login page
+
+### Using HTTP Basic Authentication  
+
+* Heading on to URL for the application will be prompted with the default layout of the login page
+
+###  __
 
