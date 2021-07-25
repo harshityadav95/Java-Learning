@@ -1,5 +1,43 @@
 # Spring Boot
 
+### Before Spring 
+
+* Java Beans , POJO  
+* Lacked  in Security and Transaction Management  
+* Then came enterprise java beans EJB
+
+  * Solved Transaction processing  
+  * Session Processing 
+  *  EJB development was not easy 
+  * Spring Emergerd as answer
+
+### Spring Features
+
+* * IoC Container
+  * Spring MVC Framework
+  * Data Access Framework
+  * Transaction Mangement
+  * Spring web service 
+  * JDBC abstraction layer
+  * Spring TestContext Framework
+  * 
+* Spring Framework Modules
+  * Spring Code Module
+  * Spring ORM Module 
+  * Spring AOP Modules 
+  * Spring MVC Modules
+  * 
+
+
+
+
+
+
+
+
+
+### 
+
 ### Model View Controller Design Pattern
 
 * Data access layer
