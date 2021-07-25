@@ -516,5 +516,128 @@ Delete the bean object code
 </bean>
 ```
 
-In the authentication manager tag
+In the authentication manager tag delete the following authentication manager  
+
+```text
+<security:authentication-provider user-service-ref="myUserDetailsService" />
+```
+
+_Next enters the following code below the code statement '&lt;security:authentication-manager&gt;':_
+
+```text
+<security: authentication-provider>
+<security:jdbc-user-service data-source-ref="dataSource"/>
+</security:authentication-provider>
+```
+
+It save the implementation of creating the database authentication object and abstracts the process 
+
+### Spring Security and Encrypted Database password
+
+#### Few Spring Security classes provided
+
+* _MD5 org.springframework.security.authentication.encoding.Md5PasswordEncoder;_
+* _SHA org.springframework.security.authentication.encoding.ShaPasswordEncoder;_
+* _BCrypt \(recommended\) org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;_
+
+#### Authentication Provider
+
+```text
+Authentication Provider
+Set up password encoder
+<security:password-encoder hash="bcrypt" />
+```
+
+### Woring with MD5
+
+Create a java class to work wit password hashing \(PasswordDemo.java\)
+
+```text
+package com.demo.assets;
+import org.springframework.stereotype.Component;
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
+
+
+@Component
+public class PasswordDemo {
+
+public String getMD5Hash(String plainText){
+Md5Password Encoder encoder = new Md5PasswordEncoder();
+String encryptd = encoder.encodePassword(plainText, null);
+System.out.println("Password encrypted using MD5 = " + encrypted );
+return encrypted;
+}
+
+}
+```
+
+Now app.demo method to run the program  
+
+```text
+import org.springframework.context.ApplicationContext;
+public class AppDemo {
+public static void main(String[ ] args) {
+// TODO Auto-generated method stub
+ApplicationContext appContext = new ClassPathXmlApplicationContext("com/
+//PasswordDemo demo = appContext.getBean("passwordDemo",PasswordDemo.class
+//demo.getMD5Hash("1234567");
+((ClassPathXmlApplicationContext) appContext).close();
+}
+}
+```
+
+### Working with Bcrypt Hash
+
+Java class to encode the function
+
+```text
+package com.demo.assets;
+
+import org.springframework.security.authentication.encoding.Md5PasswordEncode
+import org.springframework.security.authentication.encoding.ShaPasswordEncode
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Component;
+
+@Component
+public class PasswordDemo {
+
+public String getMD5Hash(String plainText){
+
+public String getSHAHash(String plainText){
+
+public String getBcryptHash(String plainText){
+
+BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+String encrypted = encoder.encode(plainText);
+System.out.println("Password encrypted using Bcrypt = " + encrypted )
+
+return encrypted;
+}
+}
+```
+
+Appdemo class
+
+```text
+import org.springframework.context.ApplicationContext;
+
+public class AppDemo {
+
+public static void main(String[ ] args) {
+// TODO Auto-generated method stub
+
+ApplicationContext appContext = new ClassPathXmlApplicationContext("c
+
+PasswordDemo demo = appContext.getBean("passwordDemo",PasswordDemo.cl
+
+//demo.getMD5Hash("1234567");
+//demo.getSHAHash("1234567");
+//demo.getBcryptHash("1234567");
+
+((ClassPathXmlApplicationContext) appContext).close();
+}
+}
+```
+
+
 
