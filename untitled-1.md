@@ -60,7 +60,7 @@
 * Providing dependencies  of the bean which could be other beans or configuration properties
 * Intercepting Bean method calls to include additional framework features
 
-### What makes spring powerful ?
+### What makes spring powerful?
 
 * How it manages dependencies
 * Design patters are responsibility of developers , solution Inversion of Control  ie role of managing depedencies is handled over to Spring framework 
