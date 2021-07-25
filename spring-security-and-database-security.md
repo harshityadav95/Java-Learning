@@ -403,5 +403,118 @@ http://www.springframework.org/schema/beans http://www.springframework...
 </beans>
 ```
 
-###  __
+* _&lt;security:http-basic/&gt;_
+
+Now  when the webpage is opened the browser HTTP authentication popup will come instead of default HTML login template  
+
+### Spring Security Database Authentication 
+
+#### General Process
+
+* Configure a data source \(username, credential drive, URL\)
+* Create a data access object \(pass the data source\) \(JDBC \)
+* Set up authentication provider with data access object 
+
+#### User Schema
+
+* User Table  
+  * username \(varchar\)
+  * password \(varchar\)
+  * enabled -true or false \(BIT or boolean\)
+* Authorities Table
+
+  * Username \(key that reference username table\) \(varchar\)
+  * authority \(set roles for the user , admin , super admin etc\) \(varchart\)
+
+  Index on that authority table
+
+Script to create the table for the authentication
+
+```text
+CREATE TABLE IF NOT EXISTS 'springdemodb'. users (
+'username' VARCHAR(50) NOT NULL,
+'password' VARCHAR(50) NOT NULL,
+'enabled' BIT(1) NOT NULL,
+PRIMARY KEY ('username'))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+
+CREATE TABLE IF NOT EXISTS 'springdemodb'.'authorities' (
+'username' VARCHAR(50) NOT NULL,
+'password' VARCHAR(50) NOT NULL,
+UNIQUE INDEX 'ix_auth_username' ('username' ASC, 'password' ASC),
+CONSTRAINT 'fk_authorities_users'
+FOREIGN KEY ('username')
+REFERENCES 'springdemodb'.'users' ('username'))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8CREATE TABLE IF NOT EXISTS 'springdemodb'. users (
+'username' VARCHAR(50) NOT NULL,
+'password' VARCHAR(50) NOT NULL,
+'enabled' BIT(1) NOT NULL,
+PRIMARY KEY ('username'))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+
+CREATE TABLE IF NOT EXISTS 'springdemodb'.'authorities' (
+'username' VARCHAR(50) NOT NULL,
+'password' VARCHAR(50) NOT NULL,
+UNIQUE INDEX 'ix_auth_username' ('username' ASC, 'password' ASC),
+CONSTRAINT 'fk_authorities_users'
+FOREIGN KEY ('username')
+REFERENCES 'springdemodb'.'users' ('username'))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+```
+
+#### Authenticating User from a Database 
+
+In the Maven Dependencies add the JDBC driver to connect the application to the database , now to connect the application to the data source add the following Bean to the file _myDemoApp-securityConfig.xml_ 
+
+```text
+<bean id="dataSource" class= "org.springframework.jdbc.datasource.DriverManagerDataSource" >
+<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+<property name="url" value="jdbc:mysql://localhost:3306/springdemodb" />
+<property name="username" value="admin"/>
+<property name= "password" value="admin"/>
+</bean>
+```
+
+Now to create an object of the class to access the database  , below the above code add the following bean  
+
+```text
+<bean id="myUserDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl" >
+<property name="dataSource" ref="dataSource"></property>
+</bean>
+```
+
+now with the database authentication in place remove the code for the InMemory authentication 
+
+```text
+<security:authentication-provider>
+<security:user-service>
+<security:user name="ANDY" password="1234567" authorities="ROLE_USER" />
+<security:user name="ANN" password="7654321" authorities="ROLE_TRIAL_USER" />
+</security:user-service>
+</security:authentication-provider>
+```
+
+and replace with the below mentioned authentication provider
+
+```text
+<security:authentication-provider user-service-ref="myUserDetailsService" />
+```
+
+Now restart the application the login form will authenticate the user using the database
+
+#### Minimal Configuration Approach to DB Authentication
+
+Delete the bean object code 
+
+```text
+<bean id="myUserDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl" >
+<property name="dataSource" ref="dataSource"></property>
+</bean>
+```
+
+In the authentication manager tag
 
