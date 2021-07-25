@@ -639,5 +639,7 @@ PasswordDemo demo = appContext.getBean("passwordDemo",PasswordDemo.cl
 }
 ```
 
+Notes for Learning
 
+![](https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/35732943)
 
