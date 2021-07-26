@@ -100,7 +100,26 @@ Spring is an open source lightweight framework , main technologies used by Sprin
 
 #### Spring WEB Flow Module  
 
-* 
+* It is an extension to the spring MVC model 
+* It helps in defining flow between the different user interfaces in the application  
+* Helps virtually split up application into different modules and use them accordingly 
+
+#### Spring DAO Module  
+
+* It introduces JDBC abstraction layer  by eliminating the need of  boiler plate coding
+* it supports programmatic and declareative approach  to transaction management  
+* Eassier suuport to access the database resources
+
+#### Spring Application Context Module
+
+* This is based on the core module of spring framework  , it supports the features from bean factory and other features such as:
+  * Internationalization 
+  * Validation  
+  * Resource Loading
+* Implements message source Interface  and provides messaging functionality to an application
+
+
+
 ### Model View Controller Design Pattern
 
 * Data access layer
