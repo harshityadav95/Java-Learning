@@ -1,36 +1,106 @@
 # Spring Boot
 
-### Before Spring 
+## Before Spring 
 
 * Java Beans , POJO  
 * Lacked  in Security and Transaction Management  
 * Then came enterprise java beans EJB
-
   * Solved Transaction processing  
   * Session Processing 
   *  EJB development was not easy 
   * Spring Emergerd as answer
 
+### Spring
+
+Spring is an open source lightweight framework , main technologies used by Spring Framework for developing enterprise applications  
+
+* Aspect Oriented Programming   AOP
+  * Enables cross cutting concerns in centralised area
+* POJO 
+* Dependecy Injection  DI
+  * Java enterprise edition specification  
+
 ### Spring Features
 
+#### IoC Container \(Inversion of Control\)
+
+* It is a core container that uses depedency injection to implictily instantiate object during runtime 
+* This container also handles configuration management  of application objects 
+
+#### Spring MVC Framework
+
+* Create web applications using MVC architecture  
+* All requests made  by the user goes through a controller  and gets dispatched to model or view  based on the mapping 
+* This framework can be integrated with all frontend technlogies 
+
+#### Data Access Framework
+
+* It allows the developer to use persistance API  such as JDBC or hibernate to store or access data in the database
+* Interacting with database, connection, closing the connection ie all the key concerned interaction with the database or exception handling along with transcation management can be handled easily with data access framework  
+
+#### Transaction Mangement
+
+* Provides Java Transaction API , JDA for global and local transaction  
+* Create a wide range of transactions on basis of Spring declaration  transaction management  
+
+#### Spring web service 
+
+* A powerful mechanism for distributing messages between two machines 
+* It generates web service endpoints  based on java classes provided 
+
+#### JDBC abstraction layer
+
+* Handles error in easy and effecient way
+* Reduce the JDBC programming 
+
+#### Spring TestContext Framework
+
+* Do unit and integration testing  
+* provide keyintegration testing functionalities  such as  
+
+  * Context Management  
+  * Caching Dependency Injection of text fixture
+
+* Supports transactional test management  
+* Default Rollback Semantics
+
+## Spring Framework Modules
+
+#### Spring Code Module
+
+* Core component of spring framework  provides the IoC container
+* there are two types of implementation of spring containers 
+  * Bean Factory
+
+    * It acts as single IoC Container for instantiation application objects 
+    * It also configures and assembes dependencies between these objects  
+
+  * Application Context
+    * It provides a central configuration for an application 
+
+#### Spring ORM Module 
+
+* Used for accessing data from databases in an application 
+* It provides supports for various ORM frameworks like Hibernate
+* Simplet declrative tranaction management  , resource management and transparent exception handling  
+
+#### Spring AOP Modules 
+
+* Object Oriented programing breaks the program into heirarchy of objects 
+* Where as AOP break it into Aspects or concerns  
+* They are typically denoted with aspect annotation 
+* Aspect Helps developer implement cross cutting concerns in a centralised fashion , rather then implementing similar object in multiple places  
+
+#### Spring MVC Modules
+
+* Implements MVC design 
+* request from the browser goes to dispatcher servlet  which then sends it to a controller based on set of Handler mapping 
+* the Controller process the application and returns back the response to the dispatcher  servlet in form of model object  
+* Dispatcher servlet uses  view resolver to send back the response  
+
+#### Spring WEB Flow Module  
+
 * 
-* Spring Framework Modules
-
-  * Spring Code Module
-  * Spring ORM Module 
-  * Spring AOP Modules 
-  * Spring MVC Modules
-
-
-
-
-
-
-
-
-
-### 
-
 ### Model View Controller Design Pattern
 
 * Data access layer
@@ -58,7 +128,7 @@
 * How it manages dependencies
 * Design patters are responsibility of developers , solution Inversion of Control  ie role of managing depedencies is handled over to Spring framework 
 
-### What is Inversion of Control  \(IoC\) ?
+### What is Inversion of Control  \(IoC\)?
 
 A process by which objects define their dependencies and an external container injects those dependencies into the object , the object need to worry where it dependencies are coming from
 
