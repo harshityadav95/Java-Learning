@@ -13,20 +13,13 @@
 
 ### Spring Features
 
-* * IoC Container
-  * Spring MVC Framework
-  * Data Access Framework
-  * Transaction Mangement
-  * Spring web service 
-  * JDBC abstraction layer
-  * Spring TestContext Framework
-  * 
+* 
 * Spring Framework Modules
+
   * Spring Code Module
   * Spring ORM Module 
   * Spring AOP Modules 
   * Spring MVC Modules
-  * 
 
 
 
