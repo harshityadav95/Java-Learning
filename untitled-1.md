@@ -10,7 +10,7 @@
   *  EJB development was not easy 
   * Spring Emergerd as answer
 
-### Spring
+### Intro to Spring
 
 Spring is an open source lightweight framework , main technologies used by Spring Framework for developing enterprise applications  
 
@@ -19,6 +19,26 @@ Spring is an open source lightweight framework , main technologies used by Sprin
 * POJO 
 * Dependecy Injection  DI
   * Java enterprise edition specification  
+
+## Spring Framework
+
+* Relies heavily on Inversion of Control 
+* Build using POJO - plain old java object
+* Spring works with java Standard edition
+* POJO+ configuration Metadata = Spring container 
+* A Spring bean is a basic building block that is managed by Spring Framework
+* Spring is responsible for creating and destorying beans
+* Providing dependencies  of the bean which could be other beans or configuration properties
+* Intercepting Bean method calls to include additional framework features
+
+### What makes spring powerful?
+
+* How it manages dependencies
+* Design patters are responsibility of developers , solution Inversion of Control  ie role of managing depedencies is handled over to Spring framework 
+
+### What is Inversion of Control  \(IoC\)?
+
+A process by which objects define their dependencies and an external container injects those dependencies into the object , the object need to worry where it dependencies are coming from
 
 ### Spring Features
 
@@ -63,8 +83,6 @@ Spring is an open source lightweight framework , main technologies used by Sprin
 
 * Supports transactional test management  
 * Default Rollback Semantics
-
-## Spring Framework Modules
 
 #### Spring Code Module
 
@@ -118,9 +136,7 @@ Spring is an open source lightweight framework , main technologies used by Sprin
   * Resource Loading
 * Implements message source Interface  and provides messaging functionality to an application
 
-
-
-### Model View Controller Design Pattern
+#### Model View Controller Design Pattern
 
 * Data access layer
 * Service Layer
@@ -129,31 +145,13 @@ Spring is an open source lightweight framework , main technologies used by Sprin
 ## Spring Boot
 
 * Inversion of Control 
-* Dependency Injection 
+* Dependency Injection
 
-### Spring Framework
-
-* Relies heavily on Inversion of Control 
-* Build using POJO - plain old java object
-* Spring works with java Standard edition
-* POJO+ configuration Metadata = Spring container 
-* A Spring bean is a basic building block that is managed by Spring Framework
-* Spring is responsible for creating and destorying beans
-* Providing dependencies  of the bean which could be other beans or configuration properties
-* Intercepting Bean method calls to include additional framework features
-
-### What makes spring powerful?
-
-* How it manages dependencies
-* Design patters are responsibility of developers , solution Inversion of Control  ie role of managing depedencies is handled over to Spring framework 
-
-### What is Inversion of Control  \(IoC\)?
-
-A process by which objects define their dependencies and an external container injects those dependencies into the object , the object need to worry where it dependencies are coming from
-
-#### Spring Modules
+### Spring Framework Modules
 
 ![](.gitbook/assets/image%20%282%29.png)
+
+####  
 
 #### 1. Core Container
 
@@ -231,6 +229,8 @@ Dependency management specify what JAR \(java archives \) and libraries our proj
 
 #### Model
 
+Models contains the application data as POJO 
+
 * Encapsulates application state \(but not application logic\)
 * Can be queried to obtain state
 * Notified  by controller when state needs to change
@@ -238,12 +238,16 @@ Dependency management specify what JAR \(java archives \) and libraries our proj
 
 #### Controller
 
+Handles the user request and act as a router between the model and the view 
+
 * Defines application logic \(not application state\)
 * Maps user actions to state changes
 * Updates application state only via model \(not directly\)
 * Updates views once application state has changed
 
 #### Views
+
+Renders the output Data  from the model in presentable format
 
 * Present application state to users via appropriate interface
 * Allow users to interact with state  , modify state
@@ -316,6 +320,54 @@ Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks
 * useful for classic 3 tier architecture
 
 ![](.gitbook/assets/image%20%285%29.png)
+
+### REST based Controller 
+
+REST \(Represntational State Transfer\) is an architectural style  that uses HTTP resources to create REST web service 
+
+#### @RestController
+
+* Used to create controller component  
+* Serve as entry point for handler mappings
+
+#### @ResponseBody
+
+* Return valye for the HTTP response obect  
+* Spring will convert the return value to HTTP response based on conent type in the header , like JSON 
+* One of the key classes that represents the entire HTTP response is response Entity 
+* All return types along with corresponding response code can be customized  with this class
+
+#### @RequestBody
+
+* It is similar to response body  
+* Spring binds the incoming HTTP request to the annotated parameter 
+* Converts the request into domain object based on the conent type in the header
+
+#### @PathVariable
+
+* Denotes the method parameter that will be  bound to the resource URL 
+
+### Spring HTTP Methods  
+
+* HTTP GET
+* HTTP PUT 
+* HTTP POST
+* HTTP DELETE
+
+### Spring MVC Rest API Advantages
+
+* Follows MVC architecture but all requests are handled through a **controller** 
+* Enables sepration of logical component for easier maintainence  
+* **Dedicated Annotation** allows defining configurations easily 
+* **Bypass view based rendering** 
+* **Path variable annotation**
+* **Resource repsresentation** 
+* **Request body annotation**
+* **REST template class**
+
+\*\*\*\*
+
+\*\*\*\*
 
 ### Maven
 
