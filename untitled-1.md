@@ -365,9 +365,59 @@ REST \(Represntational State Transfer\) is an architectural style  that uses HTT
 * **Request body annotation**
 * **REST template class**
 
-\*\*\*\*
+### **Spring Data** 
 
-\*\*\*\*
+* Provides familiar and consistent programming model for developer to access the data store 
+* Spring Data reduce the boiler plate coding
+* Provides powerful repository and custom mapping abstraction
+* Easy Integration with other spring modules 
+* Dynamic Query Generation from the method names 
+* Support wide range of persistent store 
+  * Relational Database
+  * Non Relational Database
+  * Map Reduce framework
+  * Cloud based data service
+
+#### Java Persistent API 
+
+* It is an object relational mapping standard created for Java to store access and manage object in relational database 
+* Spring Data adds and additional layer on top of the JPA for easier integration with other spring modules
+* JPA reduce boilerplate coding 
+* Focus more on business logic then configuration 
+
+#### Features of JPA  
+
+* Spring data support type safe queries that enforces data type validation 
+* It supports ability to keep track of who created or changed an entity and the point in time this happened 
+* Pagination support , where data from large result sets is returned in chunks based on page size and number  
+* Dynamic Query execution using API suggest JPA criteria 
+* Support for XML based entity mapping for configuration files
+
+#### Spring Data LDAP \(Light weight directory access protocol\)
+
+* LDAP directories are hierarchical data stores used for  storing user information to support authentication and authorisation 
+* used java-based  classes or XML namespace
+* Annotation based mapping metadata
+* Automatic implementation of repository interfaces
+* Support QueryDSL Integration 
+
+#### Spring Data Elasticsearch
+
+* Uses POJO for interacting with elastic search model 
+* Elasticsearch documents 
+* Repository access layer 
+* XML based , object mapping integrated with spring conversion services
+* Automatic implementation of repository interfaces
+* Context and dependency injection support while interacting with repositories 
+
+#### Spring for Apache Hadoop
+
+* Spring provides a unified configuration model and easy to use API
+* Enabling integration with other spring objects enabling the developers to building solution for big data  
+* **HDFS** is a distributed file system that provides high performance access to all data across the hadoop clusters
+* **MapReduce** is a framework supported by Hadoop for  processing huge amount of data in parallel
+* **Apache Pig** is a platform that analyse large sets of data that consists of high level language for expressing data analytics programs 
+* **Apache Hive** is a data warehouse for providing data query and analysis , it provides a SQL like interface for querying the data stored across different file systems and database 
 
 ### Maven
 
