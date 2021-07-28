@@ -419,6 +419,52 @@ REST \(Represntational State Transfer\) is an architectural style  that uses HTT
 * **Apache Pig** is a platform that analyse large sets of data that consists of high level language for expressing data analytics programs 
 * **Apache Hive** is a data warehouse for providing data query and analysis , it provides a SQL like interface for querying the data stored across different file systems and database 
 
+### Spring Security
+
+* It is a Java Enterprise edition framework for securing enterprise Spring based application
+* Provides features for both authentication and authorisation
+* Servlet API Integration 
+* Web Attack prevention \(session fixation ,click jacking,cross site request forgery \)
+* Supports Integration with Spring MVC
+
+#### Authentication 
+
+*  Mechanism to verify  or establish your identity 
+* Common method to do so is using user credentials 
+* Various forms of Authentication 
+  * Single Factor Authentication - requires password 
+  * Two Factor authentication - password + other info 
+  * Multi Factor Authentication - password+ info+ passcode
+
+#### Authorization 
+
+* It is the process to determine whether the authenticated user has access to particular resource or not 
+* Access control for URL
+* Secure object and methods
+* Access control lists
+
+#### Spring Security OAuth 
+
+* OAuth Providers
+* OAuth consumer
+* Supports OAuth1\(a\)
+* Support for OAuth 2.0
+
+#### Spring Security SAML 
+
+* Security Assertion Markup Language Authentication and federation mechanism in a single application
+* Supports SAML 2.0 which uses security tokens containing assertions to pass the principal user information between  the service provider and identity provider 
+* IDP \(identity provider \)and SP \(service provider\)single sign on 
+* Service provider metadata generation
+
+
+
+
+
+
+
+
+
 ### Maven
 
 *  Article  :
