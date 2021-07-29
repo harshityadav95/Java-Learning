@@ -40,12 +40,17 @@ Spring is an open source lightweight framework , main technologies used by Sprin
 
 A process by which objects define their dependencies and an external container injects those dependencies into the object , the object need to worry where it dependencies are coming from
 
+It is also called dependency injection where we let the spring container instantiate objects 
+
 ### Spring Features
 
 #### IoC Container \(Inversion of Control\)
 
+* It is a process by which object defines it dependency \(ie the other object they work with either through constructor argument or simple property \)
+* The Container Injects the dependency when the bean is being created
 * It is a core container that uses depedency injection to implictily instantiate object during runtime 
 * This container also handles configuration management  of application objects 
+* The process is Inverse therefore the inversion of container
 
 #### Spring MVC Framework
 
@@ -457,6 +462,59 @@ REST \(Represntational State Transfer\) is an architectural style  that uses HTT
 * IDP \(identity provider \)and SP \(service provider\)single sign on 
 * Service provider metadata generation
 
+### Spring Bean
+
+* Spring bean is a simple object that is instantiated , Assembled and Managed by the IoC container 
+* The Container Injects the dependency when the bean is being created
+* The process is Inverse therefore the inversion of container
+* Bean Factory interface is the central IoC interface in spring 
+* It is the actual representation of spring IoC container responsible for managing the beans 
+* The most commonly used BeanFactory interface is bean factory class using XML
+* Spring configuration contains atleast one configuration  that the container must manage 
+* There will be more then one bean defination with the XML configurations and these beans are configured as elements in the bean tag
+* Configuration metadata informs the spring container on how to instantiate , configure  and assemble objects within your application 
+* The configuration metadata is maintained in XML format 
+* Instantiating Spring IoC container  is straightforward can be achieved with use of application context 
+* Spring also supports annotation based configuration for bean creation  
+
+### Spring Bean Definitions
+
+* Bean Definitions are represented as bean definition objects which contains a **qualified package name**  , which is actual implementation class of the bean being defined  
+* **Behavioural configuration elements** which states how the bean should behave in the container  
+* **References to other Beans** which are needed for the the beans to its work , these references are also called collaborators or dependencies
+* **Other Configuration Settings** to set in the newly created object , best example is managing a connection pool 
+
+#### Spring Bean Definition Inheritance  
+
+Inheritance is ab object oriented programming mechanism where an object  is created or derived from another class  which is usually a parent-child relationship
+
+* A Bean definition contains a large amount of configuration  information , including container specific information  , constructor arguments  and property values
+* A child bean definition on the other hand is a bean definition  that inherits the configuration data  from a parent definition 
+* Child bean definitions can overwrite values if needed 
+* **Bean Factory -** child bean definition are represented by the ChildBeanDefinition class
+* Most Developers configure bean declarations in **XMLBeanFactory**
+*  ****When using XML-based configuration metadata  a child bean definition is indicated simply by using the parent attribute 
+* **Configuration Information ,** some of the configuration information for bean definition inheritance  are scope , constructor arguments , properties , and over overriding methods 
+* **ChildBeanDefinitions** , A child bean definition  will use the bean class from  the parent definition if none is specified  
+* At the same time, it  can also override it 
+* Child Beans have to be compatible with the parent 
+* It will inherit constructor argument values, property values and  the method override from parent 
+* It also have option to add new values if needed 
+
+#### Spring Bean Scopes
+
+When a bean defintion is created we are actually instanitating a class , Along with dependencies and configuration , Spring allows us to control the scope of the application as well 
+
+Spring Support 5 different scopes 
+
+* **Singleton Scope**- only one object instance will be created for  the single bean definitions
+* **Prototype Scope**- scopes a single bean definition to any number of object instantiations
+* **Request Scope -** Request scope is valid until the lifecycle of single HTTP request , each and every HTTP request will have its own instance of the bean 
+* **Session Scope -** works throughout the lifecycle of HTTP session , best example of session scope is when a user tries to login into an application and the session is valid until the user decides to log out or close the application 
+* **Global Session -** scopes a single bean definition to the lifecycle of a global  HTTP session , this is only valid when the web application is under the application context 
+
+
+
 
 
 
@@ -508,7 +566,7 @@ REST \(Represntational State Transfer\) is an architectural style  that uses HTT
 
 #### What is Spring Beans   ?
 
-Objects whose lifecycle is entirely managed by Spring Not selected Correct answer.
+Objects whose lifecycle is entirely managed by Spring 
 
 #### Which techniques using Spring will achieve inversion of control?
 
