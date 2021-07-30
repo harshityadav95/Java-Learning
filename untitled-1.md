@@ -284,13 +284,23 @@ Spring framework relies on three underlying technologies , along with the web fe
 
 #### Advantages of Spring MVC 
 
+* **Separate roles** - Spring MVC defines separate roles for the different components
+* **Powerful configuration -**  It provides robust configuration support for context references , web controllers , business objects and validators.
+* **Light Weight -** Uses light weight servlet container to develop to deploy your application with all the easy configuration and reduced boilerplate coding
+* **Rapid development** 
+* **Ease to Test -** by injecting the data using the setter methods 
+* **Reusable business code -** instead of creating new logic , use existing business objects 
+* **Flexible Mapping -** with help of annotations , mapping the configurations , re directions are very  straightforward 
+
+#### **Disadvantages of Spring MVC** 
+
+* **Steep learning curve** 
+* **Framework version instability**
+* **Dependency injection \(**entire project dependent on spring framework**\)**
 
 
-####  
 
-
-
-
+#### Components
 
 * Servlets
 * JSP \(Java Server Pages\)
