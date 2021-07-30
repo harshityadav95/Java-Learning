@@ -263,13 +263,26 @@ Each component when updated notify the listener via Synchronous methods vs. Asyn
 
 ### Spring MVC Framework
 
-Spring framework relies on three underlying technlogies
+Based on Model, View Controller Design Pattern 
+
+Spring framework relies on three underlying technologies , along with the web features , it also supports the core functionality of spring framework such as IoC and dependency injection  
+
+* **Model** - Model is typically your application data , it can be single or collection of objects 
+* **Controller -** acts as a router between model and view  and it contains all the business tools of the application  , any class marked with @Controller annotation will make it a controller class  
+* **View -** it represents the information in a particular format , JSP is an example of creating a view page 
+* **Front controller -** DispatcherServlet works as a Front controller and it is totally responsible for managing the flow of Spring MVC application  
+
+
+
+
 
 * Servlets
 * JSP \(Java Server Pages\)
 * JSTL \(Java Pages standard tag library\)
 
 Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks\)
+
+
 
 #### Servlets
 
