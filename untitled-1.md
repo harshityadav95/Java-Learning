@@ -270,7 +270,23 @@ Spring framework relies on three underlying technologies , along with the web fe
 * **Model** - Model is typically your application data , it can be single or collection of objects 
 * **Controller -** acts as a router between model and view  and it contains all the business tools of the application  , any class marked with @Controller annotation will make it a controller class  
 * **View -** it represents the information in a particular format , JSP is an example of creating a view page 
-* **Front controller -** DispatcherServlet works as a Front controller and it is totally responsible for managing the flow of Spring MVC application  
+* **Front controller -** DispatcherServlet works as a Front controller and it is totally responsible for managing the flow of Spring MVC application 
+  * one of the key components of spring MVC is the DispatcherServlet and it is a class that recieve all the incoming request and maps it accordingly to the model and the controllers 
+
+#### Spring MVC Execution Flow 
+
+1. Dispatcher Servlet recieve the incoming request
+2. Dispatcher servlet identifies the controller class based on the handler mappings 
+3. Once the controller has been identified the request gets processed 
+4. After processing it returns the model data and the exact view name 
+5. Dispatcher Servlet sends the model data to the view resolver to determine the view page 
+6. Dispatcher Servlet return the view page
+
+#### Advantages of Spring MVC 
+
+
+
+####  
 
 
 
