@@ -552,6 +552,16 @@ Spring Support 5 different scopes
 * **Session Scope -** works throughout the lifecycle of HTTP session , best example of session scope is when a user tries to login into an application and the session is valid until the user decides to log out or close the application 
 * **Global Session -** scopes a single bean definition to the lifecycle of a global  HTTP session , this is only valid when the web application is under the application context 
 
+### Spring Boot Auto-configuration
+
+* **@ConditionalOnClass** - check dependencies on specific classes before creating auto configured beans
+* **@ConditionalOnProperty** - check dependencies on properties before creating auto configured bean
+* **@ConditionalonMissingBean  -**  only create auto-configured bean if no user specified bean is available
+
+
+
+
+
 ### Spring Boot Microservices 
 
 * 
