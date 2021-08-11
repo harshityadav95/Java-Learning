@@ -11,3 +11,8 @@
 * [JVM Memory , Heap , Garbage Collection and Monitoring the JVM](jvm-memory-heap-garbage-collection-and-monitoring-the-jvm.md)
 * [Annotations](annotations.md)
 
+## JAVA Language
+
+* [Strings](java-language/strings.md)
+* [Untitled](java-language/untitled-1.md)
+
