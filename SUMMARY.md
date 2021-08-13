@@ -13,6 +13,14 @@
 
 ## JAVA Language
 
+* [History and Evolution of Java](java-language/untitled-1.md)
+* [Dataype , Variable and Java](java-language/dataype-variable-and-java.md)
 * [Strings](java-language/strings.md)
-* [Untitled](java-language/untitled-1.md)
+* [Operators](java-language/operators.md)
+* [Control Statement](java-language/control-statement.md)
+* [Methods](java-language/methods.md)
+* [Classes and Methods](java-language/classes-and-methods.md)
+* [Inheritance](java-language/inheritance.md)
+* [Package and Interface](java-language/package-and-interface.md)
+* [Exception Handling](java-language/exception-handling.md)
 
