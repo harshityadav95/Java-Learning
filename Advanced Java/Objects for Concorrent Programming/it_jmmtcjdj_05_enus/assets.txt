@@ -1,0 +1,10 @@
+it_jmmtcjdj_05_enus_02	An Introduction to Semaphores
+it_jmmtcjdj_05_enus_03	Permit Acquisition in Semaphores
+it_jmmtcjdj_05_enus_04	Visibility of Updates to Shared Variables
+it_jmmtcjdj_05_enus_05	Volatile Variables in Java
+it_jmmtcjdj_05_enus_06	Atomic Variables
+it_jmmtcjdj_05_enus_07	Synchronized Collections
+it_jmmtcjdj_05_enus_08	Thread-safe Lists
+it_jmmtcjdj_05_enus_09	Writing while Iterating over Lists
+it_jmmtcjdj_05_enus_10	The ConcurrentHashMap
+it_jmmtcjdj_05_enus_11	ConcurrentCollectionsPerformance
