@@ -23,4 +23,5 @@
 * [Inheritance](java-language/inheritance.md)
 * [Package and Interface](java-language/package-and-interface.md)
 * [Exception Handling](java-language/exception-handling.md)
+* [Collection](java-language/collection.md)
 
