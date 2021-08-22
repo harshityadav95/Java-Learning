@@ -15,6 +15,7 @@
 
 * [History and Evolution of Java](java-language/untitled-1.md)
 * [Dataype , Variable and Java](java-language/dataype-variable-and-java.md)
+* [Hashing](java-language/hashing.md)
 * [Strings](java-language/strings.md)
 * [Operators](java-language/operators.md)
 * [Control Statement](java-language/control-statement.md)
