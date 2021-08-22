@@ -2,7 +2,9 @@
 
 ### getClass \(\)
 
+```text
 
+```
 
 ### hashcode\(\) + equals\(\)
 
