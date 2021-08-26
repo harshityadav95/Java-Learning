@@ -2,6 +2,7 @@
 
 * [2021 Java RoadMap](README.md)
 * [Java Repository](java-repository.md)
+* [Maven](maven.md)
 * [Faster Java Algorithm](faster-java-algorithm.md)
 * [Notes from Btech](notes-from-btech.md)
 * [Main Method](untitled.md)
