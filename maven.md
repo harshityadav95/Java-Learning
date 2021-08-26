@@ -19,3 +19,35 @@ Maven uses a set of identifiers, also called coordinates, to uniquely identify a
 
 ### Command to Create a Maven project 
 
+```text
+mvn archetype:generate -DgroupId=com.example.demo -DartifactId=demo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DarchtypeVersion=1.0
+```
+
+this will create the java program with hello world with pom.xml and defined folder structure  
+
+### Maven Package
+
+The following command will compile and generate the compiled file in the target folder 
+
+```text
+mvn package 
+```
+
+but before that add the following java version target in the pom xml 
+
+```text
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.1</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+
