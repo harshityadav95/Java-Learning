@@ -8,5 +8,14 @@
 
 So, we can say, plugin is a Jar file which executes the task, and dependency is a Jar which provides the class files to execute the task.
 
+### Group ID and Artifact ID 
 
+![](.gitbook/assets/image%20%2814%29.png)
+
+Maven uses a set of identifiers, also called coordinates, to uniquely identify a project and specify how the project artifact should be packaged:
+
+* groupId – a unique base name of the company or group that created the project
+* artifactId – a unique name of the project
+
+### Command to Create a Maven project 
 
