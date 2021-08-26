@@ -1,10 +1,8 @@
 # Table of contents
 
 * [2021 Java RoadMap](README.md)
-* [Java Repository](java-repository.md)
 * [Maven](maven.md)
 * [Faster Java Algorithm](faster-java-algorithm.md)
-* [Notes from Btech](notes-from-btech.md)
 * [Main Method](untitled.md)
 * [Spring Boot](untitled-1.md)
 * [Spring Security & Database Security](spring-security-and-database-security.md)
@@ -28,4 +26,5 @@
 * [Package and Interface](java-language/package-and-interface.md)
 * [Exception Handling](java-language/exception-handling.md)
 * [Collection](java-language/collection.md)
+* [Reference :](java-language/notes-from-btech.md)
 
