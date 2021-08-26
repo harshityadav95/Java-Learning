@@ -51,3 +51,13 @@ but before that add the following java version target in the pom xml
 </build>
 ```
 
+### Run Project
+
+navigate into the target folder and then enter the following command to execute the created project 
+
+```text
+java -cp demo-1.0-SNAPSHOT.jar com.example.demo.App
+```
+
+
+
