@@ -14,6 +14,7 @@
 
 * [History and Evolution of Java](java-language/untitled-1.md)
 * [1. Hello World in Java](java-language/hello-world-in-java.md)
+* [2. User Input](java-language/2.-user-input.md)
 * [Dataype , Variable and Java](java-language/dataype-variable-and-java.md)
 * [Hashing](java-language/hashing.md)
 * [Strings](java-language/strings.md)
