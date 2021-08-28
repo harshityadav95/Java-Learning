@@ -34,6 +34,7 @@
 * [Exception Handling](java-language/exception-handling.md)
 * [Collection](java-language/collection.md)
 * [Optionals](java-language/optionals.md)
+* [MultiThreading vs Concurrency](java-language/multithreading-vs-concurrency.md)
 * [Concurrency , Future](java-language/concurrency-future.md)
 * [Reference :](java-language/notes-from-btech.md)
 
