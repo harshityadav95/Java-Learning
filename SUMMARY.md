@@ -19,7 +19,7 @@
 * [4. If Else Conditions](java-language/4.-if-else-conditions.md)
 * [5. Loops](java-language/5.-loops.md)
 * [Untitled](java-language/untitled.md)
-* [Dataype , Variable and Java](java-language/dataype-variable-and-java.md)
+* [6. Dataype , Variable and Java](java-language/dataype-variable-and-java.md)
 * [Hashing](java-language/hashing.md)
 * [Strings](java-language/strings.md)
 * [Operators](java-language/operators.md)
@@ -31,5 +31,6 @@
 * [Package and Interface](java-language/package-and-interface.md)
 * [Exception Handling](java-language/exception-handling.md)
 * [Collection](java-language/collection.md)
+* [Concurrency , Future](java-language/concurrency-future.md)
 * [Reference :](java-language/notes-from-btech.md)
 
