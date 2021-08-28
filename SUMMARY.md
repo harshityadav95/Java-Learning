@@ -20,6 +20,7 @@
 * [5. Loops](java-language/5.-loops.md)
 * [Untitled](java-language/untitled.md)
 * [6. Dataype , Variable and Java](java-language/dataype-variable-and-java.md)
+* [7. Variable Scopes](java-language/7.-variable-scopes.md)
 * [Hashing](java-language/hashing.md)
 * [Strings](java-language/strings.md)
 * [Operators](java-language/operators.md)
