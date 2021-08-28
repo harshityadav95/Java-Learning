@@ -17,6 +17,7 @@
 * [2. User Input](java-language/2.-user-input.md)
 * [3. User output](java-language/3.-user-output.md)
 * [4. If Else Conditions](java-language/4.-if-else-conditions.md)
+* [5. Loops](java-language/5.-loops.md)
 * [Untitled](java-language/untitled.md)
 * [Dataype , Variable and Java](java-language/dataype-variable-and-java.md)
 * [Hashing](java-language/hashing.md)
