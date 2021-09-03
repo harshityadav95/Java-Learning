@@ -78,5 +78,9 @@ We would want to launch a Java application jar at the startup of the container. 
 docker container commit --change='CMD ["java","-jar","/tmp/mytroubleartifact-0.jar"]' distracted_agnesi a-repo-name-of-choice/some-app-name:tagname2
 ```
 
+!!! Above command dosent seem to work 
+
+
+
 
 
