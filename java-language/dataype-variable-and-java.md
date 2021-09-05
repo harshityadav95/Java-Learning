@@ -1,16 +1,9 @@
 # 6. Dataype , Variable and Java
 
-
-
-
-
-
-
-
-
-
-
-
+* A _byte_ is an 8-bit signed integer.
+* A _short_ is a 16-bit signed integer.
+* An _int_ is a 32-bit signed integer.
+* A _long_ is a 64-bit signed integer.
 
 ### Boxing In Java
 
