@@ -26,7 +26,7 @@
 * [8. Static](java-language/8.-static.md)
 * [9. Date Time](java-language/9.-date-time.md)
 * [Hashing](java-language/hashing.md)
-* [Strings](java-language/strings.md)
+* [10. Strings](java-language/strings.md)
 * [Operators](java-language/operators.md)
 * [Control Statement](java-language/control-statement.md)
 * [Methods](java-language/methods.md)
