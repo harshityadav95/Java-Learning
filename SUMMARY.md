@@ -23,6 +23,8 @@
 * [Untitled](java-language/untitled.md)
 * [6. Dataype , Variable and Java](java-language/dataype-variable-and-java.md)
 * [7. Variable Scopes](java-language/7.-variable-scopes.md)
+* [8. Static](java-language/8.-static.md)
+* [9. Date Time](java-language/9.-date-time.md)
 * [Hashing](java-language/hashing.md)
 * [Strings](java-language/strings.md)
 * [Operators](java-language/operators.md)
