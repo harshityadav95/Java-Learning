@@ -75,10 +75,10 @@ The reason it is not running is we did not attach anything to run at the launch 
 We would want to launch a Java application jar at the startup of the container. We copied the JAR file into this image, but did not specify that the JAR file has to be launched at startup.
 
 ```text
-docker container commit --change='CMD ["java","-jar","/tmp/mytroubleartifact-0.jar"]' distracted_agnesi a-repo-name-of-choice/some-app-name:tagname2
+docker container commit --change="CMD ["java","-jar","/tmp/mytroubleartifact-0.jar"]" distracted_agnesi a-repo-name-of-choice/some-app-name:tagname2
 ```
 
-!!! Above command dosent seem to work 
+
 
 
 
