@@ -24,10 +24,10 @@ If you need more resources then you can use these [free Linux courses](http://ww
 
 ### 3. **Data Structures and Algorithms** <a id="2b3c"></a>
 
-These are the building blocks of any program, and a good knowledge of Algorithms and Data Structure is vital for your next job or doing well in your current situation.  
-  
-You should at least be familiar with essential data structures like an array, linked list, hash table, binary tree, queue, stack, and graph as well problem-solving techniques like dynamic programming.  
-  
+These are the building blocks of any program, and a good knowledge of Algorithms and Data Structure is vital for your next job or doing well in your current situation.
+
+You should at least be familiar with essential data structures like an array, linked list, hash table, binary tree, queue, stack, and graph as well problem-solving techniques like dynamic programming.
+
 If you know advanced data structures like Trie, B-Tree, AVL tree, then it’s well and good. But, if you don’t know, then I suggest you join a comprehensive course like [**Data Structures and Algorithms: Deep Dive Using Java**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdata-structures-and-algorithms-deep-dive-using-java%2F), which will teach you everything about all those fundamentals.[Data Structures and Algorithms: Deep Dive Using JavaTim's been a professional software developer for over 35 years. During his career, he has worked for major companies…udemy.com](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdata-structures-and-algorithms-deep-dive-using-java%2F)
 
 ### **4. HTTP / HTTPS** <a id="20d2"></a>
@@ -94,38 +94,38 @@ The next important thing to learn is JDK APIs, which are very, very important fo
 
 ### 2.1 Java Collections Framework <a id="0dcc"></a>
 
-This is one of the most essential Java API every Java developer should learn. This API provides implementations of standard data structure in Java-like linked list, set, stack, queue, hash table, priority queue, and others.  
-  
-At least you should know about all everyday objects like `ArrayList`, `HashMap`, `HashSet`, `LinkedHashSet`, `TreeSet`, etc. Each of them has its different property like ArrayList is a dynamic array that can grow, HashMap is a standard implementation of the hash table and can be used to store key-value pairs.  
-  
+This is one of the most essential Java API every Java developer should learn. This API provides implementations of standard data structure in Java-like linked list, set, stack, queue, hash table, priority queue, and others.
+
+At least you should know about all everyday objects like `ArrayList`, `HashMap`, `HashSet`, `LinkedHashSet`, `TreeSet`, etc. Each of them has its different property like ArrayList is a dynamic array that can grow, HashMap is a standard implementation of the hash table and can be used to store key-value pairs.
+
 Similarly, `HashSet` is a set implementation that doesn’t allow duplicate elements. I strongly suggest you check [**Java Fundamentals: Collections** ](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fjava-fundamentals-collections)course by Richard Warburton on Pluralsight to learn Java Collection Framework in depth.[![](https://miro.medium.com/max/60/1*kyrOViCSqrz5ZOo79x2Luw.jpeg?q=20)![](https://miro.medium.com/max/1470/1*kyrOViCSqrz5ZOo79x2Luw.jpeg)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fjava-fundamentals-collections)
 
 ### 2.2 Java Concurrency <a id="0811"></a>
 
-After Java Collections, the next, most crucial API in Java is about multithreading and concurrency, and I firmly believe that if you want to be a competent Java developer, you must have a solid understanding and command of Java Concurrency API.  
-  
-You should not only have an in-depth understanding of fundamental concepts like `Thread`, `Runnable`, Object locking, and Synchronization, but you should also be familiar with concepts like deadlock, livelock, race conditions, and how to deal with them.  
-  
-You should also learn about advanced Java concepts like synchronizers added on Java 5 and subsequent versions, I mean `CyclicBarrier`, `CountDownLatch`, `Phaser`, and `CompleteableFuture`, etc., along with Futures and how to perform the async operation in Java.  
-  
+After Java Collections, the next, most crucial API in Java is about multithreading and concurrency, and I firmly believe that if you want to be a competent Java developer, you must have a solid understanding and command of Java Concurrency API.
+
+You should not only have an in-depth understanding of fundamental concepts like `Thread`, `Runnable`, Object locking, and Synchronization, but you should also be familiar with concepts like deadlock, livelock, race conditions, and how to deal with them.
+
+You should also learn about advanced Java concepts like synchronizers added on Java 5 and subsequent versions, I mean `CyclicBarrier`, `CountDownLatch`, `Phaser`, and `CompleteableFuture`, etc., along with Futures and how to perform the async operation in Java.
+
 I know, it’s a lot of stuff, and that’s why I suggest you join an in-depth course like [**Java Concurrency in Practice bundle**](https://learning.javaspecialists.eu/courses/concurrency-in-practice-bundle?affcode=92815_johrd7r8) from Heinz Kabutz, a Java Champion, and authority when it comes to concurrency and design patterns. This course is a bit expensive, but you will learn a lot more concepts in-depth, which makes it completely worth your time and money.[![](https://miro.medium.com/max/1920/0*vZZh3J2ufCvDvxBm)](https://learning.javaspecialists.eu/courses/concurrency-in-practice-bundle?affcode=92815_johrd7r8)
 
 On the other hand, if the price is an issue, you can also check this Udemy course — [**Concurrency, Multithreading, and Parallel Computing in Java**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmultithreading-and-parallel-computing-in-java%2F) which won’t cost you more than $10 if you get it on Udemy flash sales which happens every month. This is also an excellent course to learn Java concurrency and multithreading in Java.[Concurrency, Multithreading and Parallel Computing in JavaThis course is about the basics of multithreading and concurrent programming with some parallel concepts. In the 21st…udemy.com](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmultithreading-and-parallel-computing-in-java%2F)
 
 ### 2.3 Java IO <a id="39bb"></a>
 
-I have interviewed more than 100+ Java programmers, and I have noticed one pattern; they all have very little knowledge of Java IO and NIO APIs as compared to Java Collections and Java Multithreading API. I can understand that many people spend a lot of time learning those two APIs, but you cannot leave behind these critical APIs.  
-  
-If you have to code a real-world, core Java application, you will need to use classes like `File`, `InputStream`, `OutputStream`, `Reader`, `Writer` from the `java.io` package, which is the core of the Java IO API. Similarly, you also need to know about `ByteBuffer`, `FileChannel`, `Selector`, and other critical classes from `java.nio` API, if you want to write a socket-based application.  
-  
+I have interviewed more than 100+ Java programmers, and I have noticed one pattern; they all have very little knowledge of Java IO and NIO APIs as compared to Java Collections and Java Multithreading API. I can understand that many people spend a lot of time learning those two APIs, but you cannot leave behind these critical APIs.
+
+If you have to code a real-world, core Java application, you will need to use classes like `File`, `InputStream`, `OutputStream`, `Reader`, `Writer` from the `java.io` package, which is the core of the Java IO API. Similarly, you also need to know about `ByteBuffer`, `FileChannel`, `Selector`, and other critical classes from `java.nio` API, if you want to write a socket-based application.
+
 Unfortunately, there are not many dedicated resources on teaching Java IO and Java NIO API, but [**The Complete Java Masterclass** ](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F)is a great resource to master this API. You will find a lot of essential concepts from this API in this course.[![](https://miro.medium.com/max/800/0*M3yq59qKtX8xTqAi.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F)
 
 ### 2.4 Java 8 Features <a id="7ed2"></a>
 
-Now, the next and another necessary API, a Java programmer, should learn is the Java 8 features, which has completely changed the way Java is coded and programmed nowadays. To become a Java developer in 2021, you must know how to use a [Lambda expression](https://medium.com/javarevisited/7-best-java-tutorials-and-books-to-learn-lambda-expression-and-stream-api-and-other-features-3083e6038e14?source=---------14------------------), [Stream API](https://medium.com/javarevisited/8-best-lambdas-stream-and-functional-programming-courses-for-java-developers-3d1836a97a1d), Optional classes, and a new Date and Time API.  
-  
-Without knowing these APIs, it would be very tough to write a Java application in 2021. Most of the libraries also now stop supporting versions lower than Java 8, which means you have to learn Java 8 features now than later. It’s already 5 years since Java 8 was released, so you literally have no excuse left.  
-  
+Now, the next and another necessary API, a Java programmer, should learn is the Java 8 features, which has completely changed the way Java is coded and programmed nowadays. To become a Java developer in 2021, you must know how to use a [Lambda expression](https://medium.com/javarevisited/7-best-java-tutorials-and-books-to-learn-lambda-expression-and-stream-api-and-other-features-3083e6038e14?source=---------14------------------), [Stream API](https://medium.com/javarevisited/8-best-lambdas-stream-and-functional-programming-courses-for-java-developers-3d1836a97a1d), Optional classes, and a new Date and Time API.
+
+Without knowing these APIs, it would be very tough to write a Java application in 2021. Most of the libraries also now stop supporting versions lower than Java 8, which means you have to learn Java 8 features now than later. It’s already 5 years since Java 8 was released, so you literally have no excuse left.
+
 When it comes to learning Java 8 features, there are a lot of excellent resources available in the market. Still, if you already know Java, I suggest you choose the resource which only focuses on Java 8 features like the [**Java 8 for Experienced Developers: Lambdas, Stream API & Beyond**](https://www.educative.io/courses/java-8-lambdas-stream-api-beyond?affiliate_id=5073518643380224) course on Educative. This way, you can learn Java 8 in no time.[![](https://miro.medium.com/max/2584/1*MTR8OytpiIMidLndBnsJ5g.png)](https://www.educative.io/courses/java-8-lambdas-stream-api-beyond?affiliate_id=5073518643380224)
 
 While Java 8 features are essential for Core Java developers, if you can, please learn all other new features introduced from Java 9 to Java 13 like [**Modules**](https://medium.com/javarevisited/5-courses-to-learn-java-9-features-in-depth-373f7afcf9fa), `var` for local variables, static factory methods for collections, Text Block, String in Switch, and many more. If you need more resources, you can check out this list of courses to [learn all new Java features ](https://medium.com/javarevisited/top-5-courses-to-learn-new-features-of-java-8-to-java-13-107eb51d2a13)in 2021.
@@ -136,30 +136,30 @@ The best thing about Java is that it has a vibrant ecosystem, which means there 
 
 ### 3. 1 Spring Framework <a id="16a8"></a>
 
-If you want to become a Java developer in 2021, I strongly recommend you to learn Spring Framework first. This is one of the most popular Java frameworks, and literally, almost every single Java application I have worked on in the last 5 years, uses this framework.  
-  
-Spring Framework encourages writing clean code, which is easier to test and maintain by providing you features like Dependency Injection and Inversion of Control. It also has a rich API for most of the day-to-day tasks, and that’s why every Java developer should learn the Spring framework.  
-  
+If you want to become a Java developer in 2021, I strongly recommend you to learn Spring Framework first. This is one of the most popular Java frameworks, and literally, almost every single Java application I have worked on in the last 5 years, uses this framework.
+
+Spring Framework encourages writing clean code, which is easier to test and maintain by providing you features like Dependency Injection and Inversion of Control. It also has a rich API for most of the day-to-day tasks, and that’s why every Java developer should learn the Spring framework.
+
 And, if you want to learn the Spring framework, there is no better course than [**Spring Framework 5: Beginner to Guru**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-framework-5-beginner-to-guru%2F). It covers Spring 5, the latest version of spring 5, and teaches Spring in a more hands-on way than any other course.[![](https://miro.medium.com/max/60/1*_-UoSlpGdMQtcB-h_owu9g.jpeg?q=20)![](https://miro.medium.com/max/750/1*_-UoSlpGdMQtcB-h_owu9g.jpeg)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-framework-5-beginner-to-guru%2F)
 
 ### 3.2 Hibernate <a id="a1cf"></a>
 
-The second framework which I recommend every Java developer to learn is the Hibernate, which is based upon JPA \(Java Persistence API\). To be accurate, Hibernate came before JPA, but because [JPA](https://javarevisited.blogspot.com/2018/01/top-5-hibernate-and-jpa-courses-for-java-programmers-learn-online.html) is a standard API to implement the persistence layer in Java, Hibernate implements it.  
-  
-Now, why should you learn Hibernate? Well, because most of the Java applications you will work with will interact with Database, and it’s excruciating to deal with Database in Java using[ JDBC](http://www.java67.com/2018/03/top-5-free-jdbc-courses-for-java.html) and without a proper framework like [Hibernate](https://medium.com/javarevisited/top-5-books-to-learn-hibernate-for-java-developers-b2cb4b16ccd6?source=---------14------------------).  
-  
-It provides some of the essential features like Caching and Transaction out-of-the-box, which means you have more time to focus on your application logic, than implementing caching in your application. This seriously improves the performance of Java application, and so far, my most significant reason to use Hibernate.  
-  
+The second framework which I recommend every Java developer to learn is the Hibernate, which is based upon JPA \(Java Persistence API\). To be accurate, Hibernate came before JPA, but because [JPA](https://javarevisited.blogspot.com/2018/01/top-5-hibernate-and-jpa-courses-for-java-programmers-learn-online.html) is a standard API to implement the persistence layer in Java, Hibernate implements it.
+
+Now, why should you learn Hibernate? Well, because most of the Java applications you will work with will interact with Database, and it’s excruciating to deal with Database in Java using[ JDBC](http://www.java67.com/2018/03/top-5-free-jdbc-courses-for-java.html) and without a proper framework like [Hibernate](https://medium.com/javarevisited/top-5-books-to-learn-hibernate-for-java-developers-b2cb4b16ccd6?source=---------14------------------).
+
+It provides some of the essential features like Caching and Transaction out-of-the-box, which means you have more time to focus on your application logic, than implementing caching in your application. This seriously improves the performance of Java application, and so far, my most significant reason to use Hibernate.
+
 Now, when it comes to learning Hibernate there are many great resources available in the market, but the [**Spring & Hibernate for Beginners**](https://click.linksynergy.com/link?id=JVFxdTr9V80&offerid=323058.647428&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fspring-hibernate-tutorial%2F) course is my preferred one because you can kill two birds from one stone, you can learn both Spring and Hibernate in one class rather than joining separate courses for them.[![](https://miro.medium.com/max/1436/1*D6uY2BbPHrWbqJbATQ75pg.png)](https://click.linksynergy.com/link?id=JVFxdTr9V80&offerid=323058.647428&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fspring-hibernate-tutorial%2F)
 
 Btw, if you truly want to master Hibernate or looking for an advanced Hibernate course then Vlad Mihalcea’s [**High-Performance Java Persistence**](https://vladmihalcea.teachable.com/p/high-performance-java-persistence-mach-1?utm_source=javarevisited&utm_medium=web&utm_campaign=hpjpmach1&affcode=172599_kuoszt8s) book and the course is the best resource for anyone.[High-Performance Java Persistence - Mach 1 - Download EditionVlad Mihalcea is a Java Champion and one of the top Hibernate ORM project committers. He created the Hypersistence…vladmihalcea.teachable.com](https://vladmihalcea.teachable.com/p/high-performance-java-persistence-mach-1?utm_source=javarevisited&utm_medium=web&utm_campaign=hpjpmach1&affcode=172599_kuoszt8s)
 
 ### 3.3 Spring Boot <a id="99cd"></a>
 
-This is another framework I recommend every Java developer to learn in 2021 and going forward. [Spring Boot](https://medium.com/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e?source=collection_home---4------7-----------------------) took Spring’s philosophy of simplification and made it easy to work with Spring itself. Just like Spring makes it easier to create a Java application, Spring Boot makes it easier to create a spring-based Java application.  
-  
-Features like auto-configuration take away most of the pain associated with configuring the Spring application. Similarly, starter POM features grouped commonly used dependency into simple reusable POMs.  
-  
+This is another framework I recommend every Java developer to learn in 2021 and going forward. [Spring Boot](https://medium.com/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e?source=collection_home---4------7-----------------------) took Spring’s philosophy of simplification and made it easy to work with Spring itself. Just like Spring makes it easier to create a Java application, Spring Boot makes it easier to create a spring-based Java application.
+
+Features like auto-configuration take away most of the pain associated with configuring the Spring application. Similarly, starter POM features grouped commonly used dependency into simple reusable POMs.
+
 Now, if you want to learn Spring Boot, I strongly suggest you go through [**Learn Spring Boot in 100 Steps**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-boot-tutorial-for-beginners%2F) course; it’s one of the best and most up-to-date and also provide step-by-step guides for everyday things a Spring Boot developer needs to know.[![](https://miro.medium.com/max/1410/0*Ujd5ZbvFxSdk4VTx)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-boot-tutorial-for-beginners%2F)
 
 ### 3.4 Java Microservice Frameworks — MicroProfile, Micronaut, and Quarkus <a id="e67e"></a>
@@ -182,32 +182,32 @@ If you want to learn more about MicroNaut, you can also check out[ **Learn Micro
 
 ### **3.4.3** [**Quarkus**](https://quarkus.io/) <a id="e19a"></a>
 
-Quarkus is another promising framework for Java developers. It’s a Kubernetes Native Java stack tailored for OpenJDK HotSpot and GraalVM, crafted from the best-of-breed Java libraries and standards. Quarkus tailors your application for GraalVM and HotSpot to get Amazingly fast boot time and incredibly low RSS memory \(not just heap size!\).  
-  
+Quarkus is another promising framework for Java developers. It’s a Kubernetes Native Java stack tailored for OpenJDK HotSpot and GraalVM, crafted from the best-of-breed Java libraries and standards. Quarkus tailors your application for GraalVM and HotSpot to get Amazingly fast boot time and incredibly low RSS memory \(not just heap size!\).
+
 It also provides instant scalability and high-density memory utilization in container orchestration platforms like Kubernetes using a technique called compile-time boot. You can also use both the familiar imperative code and the non-blocking reactive style when developing applications for Quarkus.
 
 In short, one of the best platforms for Java developers to create an application and something worth learning in 2021 and if you want to learn Quarkus and need a resource then [**Quarkus Backend development with Java and GraalVM**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fquarkus-backend-development-java%2F) is a great one to start with.[![](https://miro.medium.com/max/1600/0*xZ7ljAH1S6Jb4_sE.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fquarkus-backend-development-java%2F)
 
 ## 4. Testing <a id="246c"></a>
 
-Testing is an essential skill for any Java developer, particularly unit testing, integration testing, and automation testing. At the bare minimum, every Java developer should be familiar with [JUnit](https://dzone.com/articles/top-5-junit-and-unit-testing-courses-for-java-prog) and [Mockito](https://medium.com/javarevisited/5-courses-to-learn-junit-and-mockito-in-2019-best-of-lot-f217d8b93688), two of the most popular Unit testing and Mock library.  
-  
-If you know these two and know how to use them to effectively create a unit test, you will be a much better Java developer than without them.  
-  
-There are more advanced libraries that also exist like Cucumber for Business-driven testing, [Robot Framework ](https://robotframework.org/)for integration testing, but there is no substitute for JUnit, you will always need that.  
-  
-When it comes to a mocking library, you have a couple of choices like PowerMock, Mockito, and EasyMock. Still, I strongly suggest you learn Mockito because it’s a vast library, and also many Java developers and companies are doing that. It is slowly becoming the standard library for creating mock objects in Java.  
-  
+Testing is an essential skill for any Java developer, particularly unit testing, integration testing, and automation testing. At the bare minimum, every Java developer should be familiar with [JUnit](https://dzone.com/articles/top-5-junit-and-unit-testing-courses-for-java-prog) and [Mockito](https://medium.com/javarevisited/5-courses-to-learn-junit-and-mockito-in-2019-best-of-lot-f217d8b93688), two of the most popular Unit testing and Mock library.
+
+If you know these two and know how to use them to effectively create a unit test, you will be a much better Java developer than without them.
+
+There are more advanced libraries that also exist like Cucumber for Business-driven testing, [Robot Framework ](https://robotframework.org/)for integration testing, but there is no substitute for JUnit, you will always need that.
+
+When it comes to a mocking library, you have a couple of choices like PowerMock, Mockito, and EasyMock. Still, I strongly suggest you learn Mockito because it’s a vast library, and also many Java developers and companies are doing that. It is slowly becoming the standard library for creating mock objects in Java.
+
 If you want to learn JUnit and Mockito from scratch, then I also suggest you join [**Learn Java Unit Testing with Junit & Mockito in the 30 Steps**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmockito-tutorial-with-junit-examples%2F) course by In28Minutes on Udemy. It’s a practical and hands-on course to get started with both these libraries.[![](https://miro.medium.com/max/2048/0*hQYfCPdWb2I28Ddt.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmockito-tutorial-with-junit-examples%2F)
 
 If you need more options than you I have already shared a lot of resources like [books](https://javarevisited.blogspot.com/2014/08/top-5-books-to-learn-unit-testing-junit-tdd-Java-programmers.html#axzz5E2uHdG3w) and [courses](https://hackernoon.com/5-courses-java-programmers-can-join-to-learn-junit-and-mockito-in-2019-h74t38r4), you can check those to learn more.
 
 ## 5. Utility Libraries <a id="a69f"></a>
 
-The real power of Java lies in its vibrant ecosystem of open source libraries. You will find libraries to do almost anything in Java from logging to [machine learning](https://medium.com/javarevisited/10-free-machine-learning-courses-for-beginners-181f83b4c816), from sending an HTTP request to parsing JSON, and much more.  
-  
-Apart from that, Java is also lucky to have utility libraries like Apache Commons and Google Guava, these two libraries effectively complement JDK libraries. I have also shared a list of [**20 Java APIs and libraries**](https://medium.com/javarevisited/20-essential-java-libraries-and-apis-every-programmer-should-learn-5ccd41812fc7) for Java developers.  
-  
+The real power of Java lies in its vibrant ecosystem of open source libraries. You will find libraries to do almost anything in Java from logging to [machine learning](https://medium.com/javarevisited/10-free-machine-learning-courses-for-beginners-181f83b4c816), from sending an HTTP request to parsing JSON, and much more.
+
+Apart from that, Java is also lucky to have utility libraries like Apache Commons and Google Guava, these two libraries effectively complement JDK libraries. I have also shared a list of [**20 Java APIs and libraries**](https://medium.com/javarevisited/20-essential-java-libraries-and-apis-every-programmer-should-learn-5ccd41812fc7) for Java developers.
+
 I suggest you go through that list, chances are that you already half of them but if you don’t learn them they are very, very useful and help you to write better Java programs and deliver faster.[![](https://miro.medium.com/max/2136/0*hP1LBaYFQfFYnr_t.jpeg)](https://javarevisited.blogspot.com/2018/01/top-20-libraries-and-apis-for-java-programmers.html)
 
 ## 6. Database <a id="97ba"></a>

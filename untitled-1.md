@@ -1,22 +1,20 @@
 # Spring Boot
 
-## 
-
 ![](.gitbook/assets/screenshot-from-2021-08-26-17-19-57.png)
 
-## Before Spring 
+## Before Spring
 
 * Java Beans , POJO  
 * Lacked  in Security and Transaction Management  
 * Then came enterprise java beans EJB
   * Solved Transaction processing  
   * Session Processing 
-  *  EJB development was not easy 
+  * EJB development was not easy 
   * Spring Emergerd as answer
 
 ### Intro to Spring
 
-Spring is an open source lightweight framework , main technologies used by Spring Framework for developing enterprise applications  
+Spring is an open source lightweight framework , main technologies used by Spring Framework for developing enterprise applications
 
 * Aspect Oriented Programming   AOP
   * Enables cross cutting concerns in centralised area
@@ -44,7 +42,7 @@ Spring is an open source lightweight framework , main technologies used by Sprin
 
 A process by which objects define their dependencies and an external container injects those dependencies into the object , the object need to worry where it dependencies are coming from
 
-It is also called dependency injection where we let the spring container instantiate objects 
+It is also called dependency injection where we let the spring container instantiate objects
 
 ### Spring Features
 
@@ -72,7 +70,7 @@ It is also called dependency injection where we let the spring container instant
 * Provides Java Transaction API , JDA for global and local transaction  
 * Create a wide range of transactions on basis of Spring declaration  transaction management  
 
-#### Spring web service 
+#### Spring web service
 
 * A powerful mechanism for distributing messages between two machines 
 * It generates web service endpoints  based on java classes provided 
@@ -85,33 +83,29 @@ It is also called dependency injection where we let the spring container instant
 #### Spring TestContext Framework
 
 * Do unit and integration testing  
-* provide keyintegration testing functionalities  such as  
-
+* provide keyintegration testing functionalities such as
   * Context Management  
   * Caching Dependency Injection of text fixture
-
-* Supports transactional test management  
+* Supports transactional test management
 * Default Rollback Semantics
 
 #### Spring Code Module
 
 * Core component of spring framework  provides the IoC container
-* there are two types of implementation of spring containers 
+* there are two types of implementation of spring containers
   * Bean Factory
-
     * It acts as single IoC Container for instantiation application objects 
     * It also configures and assembes dependencies between these objects  
-
   * Application Context
     * It provides a central configuration for an application 
 
-#### Spring ORM Module 
+#### Spring ORM Module
 
 * Used for accessing data from databases in an application 
 * It provides supports for various ORM frameworks like Hibernate
 * Simplet declrative tranaction management  , resource management and transparent exception handling  
 
-#### Spring AOP Modules 
+#### Spring AOP Modules
 
 * Object Oriented programing breaks the program into heirarchy of objects 
 * Where as AOP break it into Aspects or concerns  
@@ -125,13 +119,13 @@ It is also called dependency injection where we let the spring container instant
 * the Controller process the application and returns back the response to the dispatcher  servlet in form of model object  
 * Dispatcher servlet uses  view resolver to send back the response  
 
-#### Spring WEB Flow Module  
+#### Spring WEB Flow Module
 
 * It is an extension to the spring MVC model 
 * It helps in defining flow between the different user interfaces in the application  
 * Helps virtually split up application into different modules and use them accordingly 
 
-#### Spring DAO Module  
+#### Spring DAO Module
 
 * It introduces JDBC abstraction layer  by eliminating the need of  boiler plate coding
 * it supports programmatic and declareative approach  to transaction management  
@@ -159,8 +153,6 @@ It is also called dependency injection where we let the spring container instant
 ### Spring Framework Modules
 
 ![](.gitbook/assets/image%20%282%29.png)
-
-####  
 
 #### 1. Core Container
 
@@ -238,7 +230,7 @@ Dependency management specify what JAR \(java archives \) and libraries our proj
 
 #### Model
 
-Models contains the application data as POJO 
+Models contains the application data as POJO
 
 * Encapsulates application state \(but not application logic\)
 * Can be queried to obtain state
@@ -247,7 +239,7 @@ Models contains the application data as POJO
 
 #### Controller
 
-Handles the user request and act as a router between the model and the view 
+Handles the user request and act as a router between the model and the view
 
 * Defines application logic \(not application state\)
 * Maps user actions to state changes
@@ -256,7 +248,7 @@ Handles the user request and act as a router between the model and the view
 
 #### Views
 
-Renders the output Data  from the model in presentable format
+Renders the output Data from the model in presentable format
 
 * Present application state to users via appropriate interface
 * Allow users to interact with state  , modify state
@@ -267,9 +259,9 @@ Each component when updated notify the listener via Synchronous methods vs. Asyn
 
 ### Spring MVC Framework
 
-Based on Model, View Controller Design Pattern 
+Based on Model, View Controller Design Pattern
 
-Spring framework relies on three underlying technologies , along with the web features , it also supports the core functionality of spring framework such as IoC and dependency injection  
+Spring framework relies on three underlying technologies , along with the web features , it also supports the core functionality of spring framework such as IoC and dependency injection
 
 * **Model** - Model is typically your application data , it can be single or collection of objects 
 * **Controller -** acts as a router between model and view  and it contains all the business tools of the application  , any class marked with @Controller annotation will make it a controller class  
@@ -277,7 +269,7 @@ Spring framework relies on three underlying technologies , along with the web fe
 * **Front controller -** DispatcherServlet works as a Front controller and it is totally responsible for managing the flow of Spring MVC application 
   * one of the key components of spring MVC is the DispatcherServlet and it is a class that recieve all the incoming request and maps it accordingly to the model and the controllers 
 
-#### Spring MVC Execution Flow 
+#### Spring MVC Execution Flow
 
 1. Dispatcher Servlet recieve the incoming request
 2. Dispatcher servlet identifies the controller class based on the handler mappings 
@@ -286,7 +278,7 @@ Spring framework relies on three underlying technologies , along with the web fe
 5. Dispatcher Servlet sends the model data to the view resolver to determine the view page 
 6. Dispatcher Servlet return the view page
 
-#### Advantages of Spring MVC 
+#### Advantages of Spring MVC
 
 * **Separate roles** - Spring MVC defines separate roles for the different components
 * **Powerful configuration -**  It provides robust configuration support for context references , web controllers , business objects and validators.
@@ -296,13 +288,11 @@ Spring framework relies on three underlying technologies , along with the web fe
 * **Reusable business code -** instead of creating new logic , use existing business objects 
 * **Flexible Mapping -** with help of annotations , mapping the configurations , re directions are very  straightforward 
 
-#### **Disadvantages of Spring MVC** 
+#### **Disadvantages of Spring MVC**
 
 * **Steep learning curve** 
 * **Framework version instability**
 * **Dependency injection \(**entire project dependent on spring framework**\)**
-
-
 
 #### Components
 
@@ -311,8 +301,6 @@ Spring framework relies on three underlying technologies , along with the web fe
 * JSTL \(Java Pages standard tag library\)
 
 Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks\)
-
-
 
 #### Servlets
 
@@ -369,9 +357,9 @@ Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks
 
 ![](.gitbook/assets/image%20%285%29.png)
 
-### REST based Controller 
+### REST based Controller
 
-REST \(Represntational State Transfer\) is an architectural style  that uses HTTP resources to create REST web service 
+REST \(Represntational State Transfer\) is an architectural style that uses HTTP resources to create REST web service
 
 #### @RestController
 
@@ -395,7 +383,7 @@ REST \(Represntational State Transfer\) is an architectural style  that uses HTT
 
 * Denotes the method parameter that will be  bound to the resource URL 
 
-### Spring HTTP Methods  
+### Spring HTTP Methods
 
 * HTTP GET
 * HTTP PUT 
@@ -413,7 +401,7 @@ REST \(Represntational State Transfer\) is an architectural style  that uses HTT
 * **Request body annotation**
 * **REST template class**
 
-### **Spring Data** 
+### **Spring Data**
 
 * Provides familiar and consistent programming model for developer to access the data store 
 * Spring Data reduce the boiler plate coding
@@ -426,14 +414,14 @@ REST \(Represntational State Transfer\) is an architectural style  that uses HTT
   * Map Reduce framework
   * Cloud based data service
 
-#### Java Persistent API 
+#### Java Persistent API
 
 * It is an object relational mapping standard created for Java to store access and manage object in relational database 
 * Spring Data adds and additional layer on top of the JPA for easier integration with other spring modules
 * JPA reduce boilerplate coding 
 * Focus more on business logic then configuration 
 
-#### Features of JPA  
+#### Features of JPA
 
 * Spring data support type safe queries that enforces data type validation 
 * It supports ability to keep track of who created or changed an entity and the point in time this happened 
@@ -475,30 +463,30 @@ REST \(Represntational State Transfer\) is an architectural style  that uses HTT
 * Web Attack prevention \(session fixation ,click jacking,cross site request forgery \)
 * Supports Integration with Spring MVC
 
-#### Authentication 
+#### Authentication
 
-*  Mechanism to verify  or establish your identity 
+* Mechanism to verify  or establish your identity 
 * Common method to do so is using user credentials 
 * Various forms of Authentication 
   * Single Factor Authentication - requires password 
   * Two Factor authentication - password + other info 
   * Multi Factor Authentication - password+ info+ passcode
 
-#### Authorization 
+#### Authorization
 
 * It is the process to determine whether the authenticated user has access to particular resource or not 
 * Access control for URL
 * Secure object and methods
 * Access control lists
 
-#### Spring Security OAuth 
+#### Spring Security OAuth
 
 * OAuth Providers
 * OAuth consumer
 * Supports OAuth1\(a\)
 * Support for OAuth 2.0
 
-#### Spring Security SAML 
+#### Spring Security SAML
 
 * Security Assertion Markup Language Authentication and federation mechanism in a single application
 * Supports SAML 2.0 which uses security tokens containing assertions to pass the principal user information between  the service provider and identity provider 
@@ -527,16 +515,16 @@ REST \(Represntational State Transfer\) is an architectural style  that uses HTT
 * **References to other Beans** which are needed for the the beans to its work , these references are also called collaborators or dependencies
 * **Other Configuration Settings** to set in the newly created object , best example is managing a connection pool 
 
-#### Spring Bean Definition Inheritance  
+#### Spring Bean Definition Inheritance
 
-Inheritance is ab object oriented programming mechanism where an object  is created or derived from another class  which is usually a parent-child relationship
+Inheritance is ab object oriented programming mechanism where an object is created or derived from another class which is usually a parent-child relationship
 
 * A Bean definition contains a large amount of configuration  information , including container specific information  , constructor arguments  and property values
 * A child bean definition on the other hand is a bean definition  that inherits the configuration data  from a parent definition 
 * Child bean definitions can overwrite values if needed 
 * **Bean Factory -** child bean definition are represented by the ChildBeanDefinition class
 * Most Developers configure bean declarations in **XMLBeanFactory**
-*  ****When using XML-based configuration metadata  a child bean definition is indicated simply by using the parent attribute 
+* _\*\*_When using XML-based configuration metadata  a child bean definition is indicated simply by using the parent attribute 
 * **Configuration Information ,** some of the configuration information for bean definition inheritance  are scope , constructor arguments , properties , and over overriding methods 
 * **ChildBeanDefinitions** , A child bean definition  will use the bean class from  the parent definition if none is specified  
 * At the same time, it  can also override it 
@@ -546,9 +534,9 @@ Inheritance is ab object oriented programming mechanism where an object  is crea
 
 #### Spring Bean Scopes
 
-When a bean defintion is created we are actually instanitating a class , Along with dependencies and configuration , Spring allows us to control the scope of the application as well 
+When a bean defintion is created we are actually instanitating a class , Along with dependencies and configuration , Spring allows us to control the scope of the application as well
 
-Spring Support 5 different scopes 
+Spring Support 5 different scopes
 
 * **Singleton Scope**- only one object instance will be created for  the single bean definitions
 * **Prototype Scope**- scopes a single bean definition to any number of object instantiations
@@ -562,28 +550,12 @@ Spring Support 5 different scopes
 * **@ConditionalOnProperty** - check dependencies on properties before creating auto configured bean
 * **@ConditionalonMissingBean  -**  only create auto-configured bean if no user specified bean is available
 
-
-
-
-
-### Spring Boot Microservices 
+### Spring Boot Microservices
 
 * 
-
-
-
-
-
-
-
-
-
-
-
-
 ### Maven
 
-*  Article  :
+* Article  :
 * POM - Project object Model
 * war file -  web archive files
 
@@ -591,40 +563,39 @@ Spring Support 5 different scopes
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
+
   <groupId>in.harshityadav</groupId>
   <artifactId>mavenlearner</artifactId>
-  
+
   <packaging>war</packaging>
-  
+
   <version>0.0.1-SNAPSHOT</version>
   <name>mavenlearner Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  
+
   <dependencies>
-  
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    
+
   </dependencies>
-  
-  
+
+
   <build>
     <finalName>mavenlearner</finalName>
   </build>
 </project>
-
 ```
 
-### Questions 
+### Questions
 
 #### What is Spring Beans   ?
 
-Objects whose lifecycle is entirely managed by Spring 
+Objects whose lifecycle is entirely managed by Spring
 
 #### Which techniques using Spring will achieve inversion of control?
 
@@ -660,19 +631,13 @@ Objects whose lifecycle is entirely managed by Spring
 * Create a REST Controller with POST Method  
 * Use REST Template to access the endpoint 
 
-### Questions 
+### Questions
 
-What annotation must be specified for the public class of your application to include Spring Boot? -  @SpringBootApplication
+What annotation must be specified for the public class of your application to include Spring Boot? - @SpringBootApplication
 
 * Dev Tools  
 * Cache Disabling  
 * Live Reload 
-
-
-
-
-
-
 
 ### Reference
 
