@@ -1,10 +1,8 @@
 # MultiThreading vs Concurrency
 
-
-
 ![](https://miro.medium.com/max/1400/0*IIj5Bhm0m2QD8KbU.png)
 
-### Introduction <a id="bfc5"></a>
+## Introduction <a id="bfc5"></a>
 
 In this blog, we will be acquainted with an easy way about an explanation for Multi-Threading Versus Asynchronous Programming. At last, we’ll talk over the differences between them.
 
@@ -28,7 +26,7 @@ Let’s look at the below illustration:![](https://miro.medium.com/max/60/0*vX7C
 * That does a slow action and take a further argument, a callback function.
 * The action is ongoing, and the callback function is called with the result when it finishes.
 
-### Multi-threading Programming <a id="ddc1"></a>
+## Multi-threading Programming <a id="ddc1"></a>
 
 Multithreading in computer programming is the capacity of a central processing unit. It makes available many threads of execution concurrently. Those are supported by the operating system. This method varies from multiprocessing. The threads share the means of a single or many cores in a multithreaded application. That contain the computing units, the CPU stores, and the translation lookaside buffer.
 
@@ -46,7 +44,7 @@ The below diagram displays a simple explanation of the concurrent execution of a
 * Every tab uses a new thread to download the demanded file.
 * They are downloading parallel as no tab delays for the other one to finish.
 
-### Multi-threaded vs. Asynchronous Environments <a id="74e8"></a>
+## Multi-threaded vs. Asynchronous Environments <a id="74e8"></a>
 
 Multi-threaded environment
 
@@ -70,7 +68,7 @@ Asynchronous environment
 * DOM events in the browser environment are preserved as automatic event points, but even their badly-written Javascript may starve the core.
 * That is why together Firefox and Chrome have these “This script is has stopped responding” disturb trainers.
 
-### Importance of Asynchronous programming in JavaScript <a id="eec6"></a>
+## Importance of Asynchronous programming in JavaScript <a id="eec6"></a>
 
 * Synchronous programming means that;
 * Barring conditionals and function calls,

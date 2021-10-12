@@ -54,7 +54,7 @@ public void whenEmptyOptionalThenExpectNoSuchElementExceptionOnGet(){
 
 ### Use of\(\) to create an instance <a id="179c"></a>
 
-You can create an _Optional_ instance that can contain a value by using the _of\(\)_ method. This method provides us the flexibility to create an optional with null __or with a non-null reference. Following is the code snippet to create an optional with the _null_ reference. Note that the below code snippet throws _NullPointerException_ as the _person_ is referenced to null.
+You can create an _Optional_ instance that can contain a value by using the _of\(\)_ method. This method provides us the flexibility to create an optional with null _\_or with a non-null reference. Following is the code snippet to create an optional with the \_null_ reference. Note that the below code snippet throws _NullPointerException_ as the _person_ is referenced to null.
 
 ```text
 @Test

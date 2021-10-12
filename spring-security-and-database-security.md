@@ -1,17 +1,17 @@
 # Spring Security & Database Security
 
-### What is Spring Security ?  
+## What is Spring Security ?
 
-The Spring Security project gives us a rich framework for adding security to our Spring apps. 
+The Spring Security project gives us a rich framework for adding security to our Spring apps.
 
-*  Spring Security is more or less the standard for securing your Spring-based applications
+* Spring Security is more or less the standard for securing your Spring-based applications
 * Applications can be stand alone Spring Applications or even web based Spring Applications
 
-### When do we use Spring Security?
+## When do we use Spring Security?
 
 * We can use it to easily implement common security concepts like authentication or authorization, 
 
-#### Authentication 
+### Authentication
 
 * Authentication is basically making sure a user or a client is who they say they are 
 * In-memory \(defining user directly in our configuration\) 
@@ -19,14 +19,14 @@ The Spring Security project gives us a rich framework for adding security to our
 * LDAP  \(**Lightweight Directory Access Protocol**\)  
 * OpenID etc.
 
-#### Authorisation 
+### Authorisation
 
 * Authorisation is making sure that that user or client should be able to access whatever it is they are trying to access.
 * [HTTPRequest Level](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 * Method Level  
 * Permission Level
 
-#### Security Namespace 
+### Security Namespace
 
 ```text
 <security:authentication-manager>
@@ -37,7 +37,7 @@ The Spring Security project gives us a rich framework for adding security to our
 </security:http>
 ```
 
-### Add Dependencies 
+## Add Dependencies
 
 ```text
 <dependency>
@@ -50,17 +50,16 @@ The Spring Security project gives us a rich framework for adding security to our
 <groupId>org.springframework.security</groupId>
 <artifactId>spring-security-config</artifactId>
 </dependency>
-
 ```
 
-Add the spring security framework in the pom.xml  or add it from the manage dependencies.
+Add the spring security framework in the pom.xml or add it from the manage dependencies.
 
-### Dependency Management 
+## Dependency Management
 
 ```text
 <dependencyManagement>
-	<dependencies>
-		<dependency>
+    <dependencies>
+        <dependency>
 <groupId>org.springframework</groupId>
 <artifactId>spring-framework-bom</artifactId>
 <version>4.0.6.RELEASE</version>
@@ -71,7 +70,7 @@ Add the spring security framework in the pom.xml  or add it from the manage depe
 </dependencyManagement>
 ```
 
-### Dependency vs Dependency Management 
+## Dependency vs Dependency Management
 
 In the parent POM, the main difference between the **`<dependencies>`** and **`<dependencyManagement>`** is this:
 
@@ -87,25 +86,21 @@ Link 1 : [Documentation](https://maven.apache.org/guides/introduction/introducti
 
 Link 2 : [Article ](https://jainamit333.wordpress.com/2017/08/05/difference-between-dependency-management-and-dependencies-in-maven/)
 
-### Dispatcher Servlet 
-
-
+## Dispatcher Servlet
 
 * `DispatcherServlet` is sub classing the HTTP `servlet` class.
 * `DispatcherServlet` is basically prepared to handle all the HTTP requests that comes into the application. 
 * Spring security was built in such a way that it takes advantage of filters.
 
-
-
-### Filters
+## Filters
 
 * we can use a filter to intercept HTTP requests before they actually arrive at the `DispatcherServlet` and that gives us an entry point for implementing security
 
-### XML Application Context for Spring Security
+## XML Application Context for Spring Security
 
-#### Setting up an Filter \(web.xml\)
+### Setting up an Filter \(web.xml\)
 
-Goto \(_/main/webapp/WEB-INF/web.xml_\) and add the following code for the dispatcher servlet  
+Goto \(_/main/webapp/WEB-INF/web.xml_\) and add the following code for the dispatcher servlet
 
 ```text
 <servlet>
@@ -121,7 +116,7 @@ Goto \(_/main/webapp/WEB-INF/web.xml_\) and add the following code for the dispa
 </servlet>
 ```
 
-and URL Mapping 
+and URL Mapping
 
 ```text
 <servlet-mapping>
@@ -130,7 +125,7 @@ and URL Mapping
 </servlet-mapping>
 ```
 
-_enters the following code below &lt;/servlet-mapping&gt;:_  
+_enters the following code below &lt;/servlet-mapping&gt;:_
 
 ```text
 <filter>
@@ -148,9 +143,9 @@ Add the Filter Mapping
 </filter-mapping
 ```
 
-#### Creating an XML Application Context for Spring Security   \(web.xml\)
+### Creating an XML Application Context for Spring Security   \(web.xml\)
 
-Adding Context Loader Listener 
+Adding Context Loader Listener
 
 ```text
 <listener>
@@ -158,7 +153,7 @@ Adding Context Loader Listener
 </listener>
 ```
 
-#### Add Context Param  \(web.xml\)
+### Add Context Param  \(web.xml\)
 
 ```text
 <context-param>
@@ -169,7 +164,7 @@ Adding Context Loader Listener
 </context-param>
 ```
 
-Finally web.xml will look like this 
+Finally web.xml will look like this
 
 ```text
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -218,14 +213,13 @@ version= "3.0">
 /WEB-INF/config/myDemoApp-appConfig.xml
 </param-value>
 </context-param>
-
 ```
 
-Now for the Context Param defined 
+Now for the Context Param defined
 
-#### Define Data Source at  "myDemoApp-appConfig.xml"
+### Define Data Source at  "myDemoApp-appConfig.xml"
 
-The file will look something like this  
+The file will look something like this
 
 ```text
 <?xml version="1.0" encoding="UTF-8"?>
@@ -258,24 +252,23 @@ Now to create the filter we defined in web.xml to provide the actual security de
 
 </param-value>
 </context-param>
-
 ```
 
-in config folder create another  Spring Bean Configuration file for the "myDemoApp-securityConfig.xml"
+in config folder create another Spring Bean Configuration file for the "myDemoApp-securityConfig.xml"
 
-After the File has been created  
+After the File has been created
 
 * go to my **Namespaces** tab here at the bottom and I am going to check the security namespace; and then **Save** the file.
 * Now go back to the **Source**, you can see now I have my `security` namespace set up. 
 * Start providing configuration information from within this application context.
 
-Now you can start providing security configuration from bean  
+Now you can start providing security configuration from bean
 
-### Spring Security in Memory Authentication  
+## Spring Security in Memory Authentication
 
 go to my **Namespaces** tab here at the bottom and I am going to check the security namespace; and then I am going to **Save** this file. And if I now go back to the **Source**, you can see now I have my `security` namespace set up. Now I can actually go ahead and start providing configuration information from within this application context.
 
-New Web.xml 
+New Web.xml
 
 ```text
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -315,9 +308,9 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com...vers
 </context-param>
 ```
 
-same as that of web.xml security 
+same as that of web.xml security
 
-####  myDemoApp-appConfig.xml
+### myDemoApp-appConfig.xml
 
 ```text
 < ?xml version="1.0" encoding="UTF-8"?>
@@ -335,8 +328,6 @@ http://www.springframework.org/schema/beans http://www.springframework...
 </beans>
 ```
 
- 
-
 * using the `http` tag coming from the `security` namespace. 
 * tag basically serves as a container for us to provide some HTTP security configuration information.
 * `auto-config` attribute to `"true"`. 
@@ -344,7 +335,7 @@ http://www.springframework.org/schema/beans http://www.springframework...
 * `In http` tag  setting up an `intercept-url`,setting up a `pattern` , the `pattern` attribute to `"/**"` and that basically means to intercept everything.
 * `access` attribute here to `"ROLE_USER"`. And the effect of this entire line here, this `intercept-url` tag is we're only going to allow access to our application for authenticated users who have a role of user or a role of `"ROLE_USER"` 
 
-####  In-Memory authentication,
+### In-Memory authentication,
 
 * `authentication-manager;`
 
@@ -375,7 +366,7 @@ http://www.springframework.org/schema/beans http://www.springframework...
 
 * Heading on to URL for the application will be prompted with the default layout of the login page
 
-### Using HTTP Basic Authentication  
+## Using HTTP Basic Authentication
 
 * Heading on to URL for the application will be prompted with the default layout of the login page from "auto config"
 * Now to add the  basic HTTP security to the previous config  
@@ -405,17 +396,17 @@ http://www.springframework.org/schema/beans http://www.springframework...
 
 * _&lt;security:http-basic/&gt;_
 
-Now  when the webpage is opened the browser HTTP authentication popup will come instead of default HTML login template  
+Now when the webpage is opened the browser HTTP authentication popup will come instead of default HTML login template
 
-### Spring Security Database Authentication 
+## Spring Security Database Authentication
 
-#### General Process
+### General Process
 
 * Configure a data source \(username, credential drive, URL\)
 * Create a data access object \(pass the data source\) \(JDBC \)
 * Set up authentication provider with data access object 
 
-#### User Schema
+### User Schema
 
 * User Table  
   * username \(varchar\)
@@ -466,9 +457,9 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 ```
 
-#### Authenticating User from a Database 
+### Authenticating User from a Database
 
-In the Maven Dependencies add the JDBC driver to connect the application to the database , now to connect the application to the data source add the following Bean to the file _myDemoApp-securityConfig.xml_ 
+In the Maven Dependencies add the JDBC driver to connect the application to the database , now to connect the application to the data source add the following Bean to the file _myDemoApp-securityConfig.xml_
 
 ```text
 <bean id="dataSource" class= "org.springframework.jdbc.datasource.DriverManagerDataSource" >
@@ -479,7 +470,7 @@ In the Maven Dependencies add the JDBC driver to connect the application to the 
 </bean>
 ```
 
-Now to create an object of the class to access the database  , below the above code add the following bean  
+Now to create an object of the class to access the database , below the above code add the following bean
 
 ```text
 <bean id="myUserDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl" >
@@ -487,7 +478,7 @@ Now to create an object of the class to access the database  , below the above c
 </bean>
 ```
 
-now with the database authentication in place remove the code for the InMemory authentication 
+now with the database authentication in place remove the code for the InMemory authentication
 
 ```text
 <security:authentication-provider>
@@ -506,9 +497,9 @@ and replace with the below mentioned authentication provider
 
 Now restart the application the login form will authenticate the user using the database
 
-#### Minimal Configuration Approach to DB Authentication
+### Minimal Configuration Approach to DB Authentication
 
-Delete the bean object code 
+Delete the bean object code
 
 ```text
 <bean id="myUserDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl" >
@@ -516,7 +507,7 @@ Delete the bean object code
 </bean>
 ```
 
-In the authentication manager tag delete the following authentication manager  
+In the authentication manager tag delete the following authentication manager
 
 ```text
 <security:authentication-provider user-service-ref="myUserDetailsService" />
@@ -530,17 +521,17 @@ _Next enters the following code below the code statement '&lt;security:authentic
 </security:authentication-provider>
 ```
 
-It save the implementation of creating the database authentication object and abstracts the process 
+It save the implementation of creating the database authentication object and abstracts the process
 
-### Spring Security and Encrypted Database password
+## Spring Security and Encrypted Database password
 
-#### Few Spring Security classes provided
+### Few Spring Security classes provided
 
 * _MD5 org.springframework.security.authentication.encoding.Md5PasswordEncoder;_
 * _SHA org.springframework.security.authentication.encoding.ShaPasswordEncoder;_
 * _BCrypt \(recommended\) org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;_
 
-#### Authentication Provider
+### Authentication Provider
 
 ```text
 Authentication Provider
@@ -548,7 +539,7 @@ Set up password encoder
 <security:password-encoder hash="bcrypt" />
 ```
 
-### Woring with MD5
+## Woring with MD5
 
 Create a java class to work wit password hashing \(PasswordDemo.java\)
 
@@ -571,7 +562,7 @@ return encrypted;
 }
 ```
 
-Now app.demo method to run the program  
+Now app.demo method to run the program
 
 ```text
 import org.springframework.context.ApplicationContext;
@@ -586,7 +577,7 @@ ApplicationContext appContext = new ClassPathXmlApplicationContext("com/
 }
 ```
 
-### Working with Bcrypt Hash
+## Working with Bcrypt Hash
 
 Java class to encode the function
 

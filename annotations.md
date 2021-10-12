@@ -105,7 +105,7 @@ You can `@Ignore` tests in two possible scenarios:
 @Ignore
 @Test(expected=NullPointerException.class)   //obviously wrong test
 public void outOfBounds(){ 
-                 
+
     new ArrayList<Object>().get(1); 
 }
 ```
@@ -127,12 +127,12 @@ public void outOfBounds(){
 
 ```text
 public class OutputFileTest{    @BeforeAll
-    public static void startServer() { ... }    @Before	
+    public static void startServer() { ... }    @Before    
     public void createTestLogFile() { ... }
-  
+
     @After
     public void deleteTestLogFile() { ... }
-     
+
     @Test 
     public void test1() { ... }    @Test 
     public void test2() { ... }    @AfterAll
