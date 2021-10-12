@@ -27,7 +27,6 @@
 * [9. Date Time](java-language/9.-date-time.md)
 * [Hashing](java-language/hashing.md)
 * [10. Strings](java-language/strings.md)
-* [11. ArrayList](java-language/11.-arraylist.md)
 * [Operators](java-language/operators.md)
 * [Control Statement](java-language/control-statement.md)
 * [Methods](java-language/methods.md)
@@ -41,4 +40,3 @@
 * [MultiThreading vs Concurrency](java-language/multithreading-vs-concurrency.md)
 * [Concurrency , Future](java-language/concurrency-future.md)
 * [Reference :](java-language/notes-from-btech.md)
-

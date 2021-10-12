@@ -1,6 +1,6 @@
 # Spring Boot
 
-![](.gitbook/assets/screenshot-from-2021-08-26-17-19-57.png)
+![](<.gitbook/assets/Screenshot from 2021-08-26 17-19-57.png>)
 
 ## Before Spring
 
@@ -38,7 +38,7 @@ Spring is an open source lightweight framework , main technologies used by Sprin
 * How it manages dependencies
 * Design patters are responsibility of developers , solution Inversion of Control  ie role of managing depedencies is handled over to Spring framework 
 
-### What is Inversion of Control  \(IoC\)?
+### What is Inversion of Control  (IoC)?
 
 A process by which objects define their dependencies and an external container injects those dependencies into the object , the object need to worry where it dependencies are coming from
 
@@ -46,9 +46,9 @@ It is also called dependency injection where we let the spring container instant
 
 ### Spring Features
 
-#### IoC Container \(Inversion of Control\)
+#### IoC Container (Inversion of Control)
 
-* It is a process by which object defines it dependency \(ie the other object they work with either through constructor argument or simple property \)
+* It is a process by which object defines it dependency (ie the other object they work with either through constructor argument or simple property )
 * The Container Injects the dependency when the bean is being created
 * It is a core container that uses depedency injection to implictily instantiate object during runtime 
 * This container also handles configuration management  of application objects 
@@ -152,7 +152,7 @@ It is also called dependency injection where we let the spring container instant
 
 ### Spring Framework Modules
 
-![](.gitbook/assets/image%20%282%29.png)
+![](<.gitbook/assets/image (2).png>)
 
 #### 1. Core Container
 
@@ -162,13 +162,13 @@ It is also called dependency injection where we let the spring container instant
 * All other projects are  build on top of core container
 * Spring-core and spring-beans for IoC and dependency injection
 * Application Context eliminates singletons and decouple components
-* spring-context for access to objects in JNDI \(Java Naming and Directory Interface\) registry style
+* spring-context for access to objects in JNDI (Java Naming and Directory Interface) registry style
 * spring-expression for working with object at runtime
 
 #### 2. Data Access and Integration
 
 * spring-jdbc abstracts away vendor specific error codes and handling
-* spring-orm for working with Java-Persistance API \(JPA\) , Hibernate and other ORM API's
+* spring-orm for working with Java-Persistance API (JPA) , Hibernate and other ORM API's
 * spring-jms , spring messaging for message processing 
 * spring-tx for working with POJO declaratively
 
@@ -186,9 +186,9 @@ It is also called dependency injection where we let the spring container instant
 * spring-webmvc for web application programming  using MVC paradigm
 * spring-websockets as thin lightweight layer above TCP
 
-#### \(AOP\) Aspect Oriented Programming
+#### (AOP) Aspect Oriented Programming
 
-* Programming paradigm that adds new " aspects" to behaviour of existing code using "pointcuts" \(external specifications\)
+* Programming paradigm that adds new " aspects" to behaviour of existing code using "pointcuts" (external specifications)
 * This ensures existing code is not modified to add new behaviour
 
 #### AOP in Spring
@@ -207,13 +207,13 @@ It is also called dependency injection where we let the spring container instant
 
 ### Dependency Management
 
-Dependency management specify what JAR \(java archives \) and libraries our project depends upon
+Dependency management specify what JAR (java archives ) and libraries our project depends upon
 
-* process of correctly getting all required jar files into correct location \(and into classpath\) so that spring works correctly
+* process of correctly getting all required jar files into correct location (and into classpath) so that spring works correctly
 * Extremely important and somewhat tricky to get right
 * Dependencies include compile time as well as run-time
 * Different and distinct from dependency injection 
-* Deals with physical resources \(files\)
+* Deals with physical resources (files)
 * Direct vs transitive dependencies
 * Transitive dependencies are hardest to manage
 * Need copy of all jar libraries for Spring 
@@ -232,7 +232,7 @@ Dependency management specify what JAR \(java archives \) and libraries our proj
 
 Models contains the application data as POJO
 
-* Encapsulates application state \(but not application logic\)
+* Encapsulates application state (but not application logic)
 * Can be queried to obtain state
 * Notified  by controller when state needs to change
 * Notifies controller once state has been changed  
@@ -241,9 +241,9 @@ Models contains the application data as POJO
 
 Handles the user request and act as a router between the model and the view
 
-* Defines application logic \(not application state\)
+* Defines application logic (not application state)
 * Maps user actions to state changes
-* Updates application state only via model \(not directly\)
+* Updates application state only via model (not directly)
 * Updates views once application state has changed
 
 #### Views
@@ -252,7 +252,7 @@ Renders the output Data from the model in presentable format
 
 * Present application state to users via appropriate interface
 * Allow users to interact with state  , modify state
-* Do not store application data \(except for caching\)
+* Do not store application data (except for caching)
 * Built using reusable and configurable element
 
 Each component when updated notify the listener via Synchronous methods vs. Asynchronous events
@@ -292,15 +292,15 @@ Spring framework relies on three underlying technologies , along with the web fe
 
 * **Steep learning curve** 
 * **Framework version instability**
-* **Dependency injection \(**entire project dependent on spring framework**\)**
+* **Dependency injection (**entire project dependent on spring framework**)**
 
 #### Components
 
 * Servlets
-* JSP \(Java Server Pages\)
-* JSTL \(Java Pages standard tag library\)
+* JSP (Java Server Pages)
+* JSTL (Java Pages standard tag library)
 
-Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks\)
+Servlets --> JSP --> JSTL (collection of useful JSP tags for common tasks)
 
 #### Servlets
 
@@ -309,9 +309,9 @@ Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks
 * Run on a Java-enabled web or app server
 * Handle incoming HTTP requests
 
-![](.gitbook/assets/image%20%284%29.png)
+![](<.gitbook/assets/image (4).png>)
 
-* Servlet \(Java program\) runs within environment of Servlet Engine 
+* Servlet (Java program) runs within environment of Servlet Engine 
 * Servlet Engine also referred to as Servlet Container
 * Deals with cookies and MIME types
 * Support for session management and security
@@ -319,7 +319,7 @@ Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks
 #### JSP  , Java Server Pages
 
 * Java ServerPages are an abstraction on top of servlets
-* JSP scriptlet is a basic unit -enclosed in tags &lt;% ......%&gt;
+* JSP scriptlet is a basic unit -enclosed in tags <% ......%>
 * JSP scriptlet will be injected into a servlet at runtime
 * Servlet corresponding to JSP scriptlet will be cached and re-used until JSP is modified
 * JSP Compiler is needed to compile JSP scriplets to servlet
@@ -336,9 +336,9 @@ Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks
 
 #### JSTL Tag Classification
 
-* JSTL Core : loops , control flow ,&lt;div&gt; output
+* JSTL Core : loops , control flow ,\<div> output
 * JSTL Formatting : dates, internationalization
-* JSTL SQL : use usually discouraged \(security\)
+* JSTL SQL : use usually discouraged (security)
 * JSTL XML : working with XML documents
 * JSTL functions : mainly string manipulation 
 
@@ -350,16 +350,16 @@ Servlets --&gt; JSP --&gt; JSTL \(collection of useful JSP tags for common tasks
 
 #### Typical Spring MVC App
 
-* Model - Pojo  \(Plain old java object\)
+* Model - Pojo  (Plain old java object)
 * Views - JSP templates written with JSTL
 * Controller - Dispatcher Servlet
 * useful for classic 3 tier architecture
 
-![](.gitbook/assets/image%20%285%29.png)
+![](<.gitbook/assets/image (5) (1).png>)
 
 ### REST based Controller
 
-REST \(Represntational State Transfer\) is an architectural style that uses HTTP resources to create REST web service
+REST (Represntational State Transfer) is an architectural style that uses HTTP resources to create REST web service
 
 #### @RestController
 
@@ -429,7 +429,7 @@ REST \(Represntational State Transfer\) is an architectural style that uses HTTP
 * Dynamic Query execution using API suggest JPA criteria 
 * Support for XML based entity mapping for configuration files
 
-#### Spring Data LDAP \(Light weight directory access protocol\)
+#### Spring Data LDAP (Light weight directory access protocol)
 
 * LDAP directories are hierarchical data stores used for  storing user information to support authentication and authorisation 
 * used java-based  classes or XML namespace
@@ -460,7 +460,7 @@ REST \(Represntational State Transfer\) is an architectural style that uses HTTP
 * It is a Java Enterprise edition framework for securing enterprise Spring based application
 * Provides features for both authentication and authorisation
 * Servlet API Integration 
-* Web Attack prevention \(session fixation ,click jacking,cross site request forgery \)
+* Web Attack prevention (session fixation ,click jacking,cross site request forgery )
 * Supports Integration with Spring MVC
 
 #### Authentication
@@ -483,14 +483,14 @@ REST \(Represntational State Transfer\) is an architectural style that uses HTTP
 
 * OAuth Providers
 * OAuth consumer
-* Supports OAuth1\(a\)
+* Supports OAuth1(a)
 * Support for OAuth 2.0
 
 #### Spring Security SAML
 
 * Security Assertion Markup Language Authentication and federation mechanism in a single application
 * Supports SAML 2.0 which uses security tokens containing assertions to pass the principal user information between  the service provider and identity provider 
-* IDP \(identity provider \)and SP \(service provider\)single sign on 
+* IDP (identity provider )and SP (service provider)single sign on 
 * Service provider metadata generation
 
 ### Spring Bean
@@ -552,14 +552,15 @@ Spring Support 5 different scopes
 
 ### Spring Boot Microservices
 
-* 
+*
+
 ### Maven
 
 * Article  :
 * POM - Project object Model
 * war file -  web archive files
 
-```text
+```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -643,4 +644,3 @@ What annotation must be specified for the public class of your application to in
 
 * [https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html](https://docs.spring.io/spring-framework/docs/2.5.x/reference/aop.html)
 * [https://medium.com/engineering-zemoso/when-not-to-autowire-in-spring-spring-boot-93e6a01cb793](https://medium.com/engineering-zemoso/when-not-to-autowire-in-spring-spring-boot-93e6a01cb793)
-

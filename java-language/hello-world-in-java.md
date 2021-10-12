@@ -4,7 +4,7 @@ Compiling and Executing a Hello World Java Program in Command Line
 
 ## Create a java program in a file named " HelloWorld.java"
 
-```text
+```
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello world..!!!");
@@ -14,5 +14,4 @@ public class HelloWorld {
 
 ## Compile and Run
 
-![](../.gitbook/assets/image%20%287%29%20%281%29.png)
-
+![](<../.gitbook/assets/image (7) (4).png>)

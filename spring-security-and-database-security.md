@@ -14,9 +14,9 @@ The Spring Security project gives us a rich framework for adding security to our
 ### Authentication
 
 * Authentication is basically making sure a user or a client is who they say they are 
-* In-memory \(defining user directly in our configuration\) 
+* In-memory (defining user directly in our configuration) 
 * Database 
-* LDAP  \(**Lightweight Directory Access Protocol**\)  
+* LDAP  (**Lightweight Directory Access Protocol**)  
 * OpenID etc.
 
 ### Authorisation
@@ -28,7 +28,7 @@ The Spring Security project gives us a rich framework for adding security to our
 
 ### Security Namespace
 
-```text
+```
 <security:authentication-manager>
 <security:authentication-provided/>
 <security:authentication-manager/>
@@ -39,7 +39,7 @@ The Spring Security project gives us a rich framework for adding security to our
 
 ## Add Dependencies
 
-```text
+```
 <dependency>
     <groupId>org.springframework.security</groupId>
     <artifactId>spring-security-web</artifactId>
@@ -56,7 +56,7 @@ Add the spring security framework in the pom.xml or add it from the manage depen
 
 ## Dependency Management
 
-```text
+```
 <dependencyManagement>
     <dependencies>
         <dependency>
@@ -74,10 +74,10 @@ Add the spring security framework in the pom.xml or add it from the manage depen
 
 In the parent POM, the main difference between the **`<dependencies>`** and **`<dependencyManagement>`** is this:
 
-* Artifacts specified in the **`<dependencies>`** section will ALWAYS be included as a dependency of the child module\(s\).
+* Artifacts specified in the **`<dependencies>`** section will ALWAYS be included as a dependency of the child module(s).
 * Artifacts specified in the **`<dependencyManagement>`** section, will only be included in the child module if they were also specified in the **`<dependencies>`** section of the child module itself. Why is it good you ask? Because you specify the version and/or scope in the parent, and you can leave them out when specifying the transitive dependencies in the child POM. This can help you use unified versions for dependencies for child modules, without specifying the version in each child module.
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](<.gitbook/assets/image (8).png>)
 
 Link 1 : [Documentation](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
 
@@ -98,11 +98,11 @@ Link 2 : [Article ](https://jainamit333.wordpress.com/2017/08/05/difference-betw
 
 ## XML Application Context for Spring Security
 
-### Setting up an Filter \(web.xml\)
+### Setting up an Filter (web.xml)
 
-Goto \(_/main/webapp/WEB-INF/web.xml_\) and add the following code for the dispatcher servlet
+Goto (_/main/webapp/WEB-INF/web.xml_) and add the following code for the dispatcher servlet
 
-```text
+```
 <servlet>
 <servlet-name>MySpringSecurityDemoApp</servlet-name>
 <servlet-class>org.springframework.web.servlet.DispatcherServlet</ servlet-class>
@@ -118,16 +118,16 @@ Goto \(_/main/webapp/WEB-INF/web.xml_\) and add the following code for the dispa
 
 and URL Mapping
 
-```text
+```
 <servlet-mapping>
 <servlet-name>MySpringSecurityDemoApp</servlet-name>
 <url-pattern>/</url-pattern>
 </servlet-mapping>
 ```
 
-_enters the following code below &lt;/servlet-mapping&gt;:_
+_enters the following code below \</servlet-mapping>:_
 
-```text
+```
 <filter>
 <filter-name>springSecurityFilterChain</filter-name>
 <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
@@ -136,26 +136,26 @@ _enters the following code below &lt;/servlet-mapping&gt;:_
 
 Add the Filter Mapping
 
-```text
+```
 <filter-mapping>
 <filter-name>springSecurityFilterChain</filter-name>
 <url-pattern>/*</url-pattern>
 </filter-mapping
 ```
 
-### Creating an XML Application Context for Spring Security   \(web.xml\)
+### Creating an XML Application Context for Spring Security   (web.xml)
 
 Adding Context Loader Listener
 
-```text
+```
 <listener>
 <listener-class>org.springframework.web.context.Context LoaderListener</
 </listener>
 ```
 
-### Add Context Param  \(web.xml\)
+### Add Context Param  (web.xml)
 
-```text
+```
 <context-param>
 <param-name>contextConfigLocation</param-name>
 <param-value>
@@ -166,7 +166,7 @@ Adding Context Loader Listener
 
 Finally web.xml will look like this
 
-```text
+```
 <?xml version="1.0" encoding="UTF-8" ?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -221,7 +221,7 @@ Now for the Context Param defined
 
 The file will look something like this
 
-```text
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -239,9 +239,9 @@ http://www.springframework.org/schema/context http://www.springframework
 </beans>
 ```
 
-Now to create the filter we defined in web.xml to provide the actual security define another &lt;param-value &gt;
+Now to create the filter we defined in web.xml to provide the actual security define another \<param-value >
 
-```text
+```
 <context-param>
 <param-name>contextConfigLocation</param-name>
 <param-value>
@@ -270,7 +270,7 @@ go to my **Namespaces** tab here at the bottom and I am going to check the secur
 
 New Web.xml
 
-```text
+```
 <?xml version="1.0" encoding="UTF-8" ?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -312,7 +312,7 @@ same as that of web.xml security
 
 ### myDemoApp-appConfig.xml
 
-```text
+```
 < ?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -339,7 +339,7 @@ http://www.springframework.org/schema/beans http://www.springframework...
 
 * `authentication-manager;`
 
-```text
+```
 < ?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -371,7 +371,7 @@ http://www.springframework.org/schema/beans http://www.springframework...
 * Heading on to URL for the application will be prompted with the default layout of the login page from "auto config"
 * Now to add the  basic HTTP security to the previous config  
 
-```text
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -394,7 +394,7 @@ http://www.springframework.org/schema/beans http://www.springframework...
 </beans>
 ```
 
-* _&lt;security:http-basic/&gt;_
+* _\<security:http-basic/>_
 
 Now when the webpage is opened the browser HTTP authentication popup will come instead of default HTML login template
 
@@ -402,26 +402,26 @@ Now when the webpage is opened the browser HTTP authentication popup will come i
 
 ### General Process
 
-* Configure a data source \(username, credential drive, URL\)
-* Create a data access object \(pass the data source\) \(JDBC \)
+* Configure a data source (username, credential drive, URL)
+* Create a data access object (pass the data source) (JDBC )
 * Set up authentication provider with data access object 
 
 ### User Schema
 
 * User Table  
-  * username \(varchar\)
-  * password \(varchar\)
-  * enabled -true or false \(BIT or boolean\)
-* Authorities Table
+  * username (varchar)
+  * password (varchar)
+  * enabled -true or false (BIT or boolean)
+*   Authorities Table
 
-  * Username \(key that reference username table\) \(varchar\)
-  * authority \(set roles for the user , admin , super admin etc\) \(varchart\)
+    * Username (key that reference username table) (varchar)
+    * authority (set roles for the user , admin , super admin etc) (varchart)
 
-  Index on that authority table
+    Index on that authority table
 
 Script to create the table for the authentication
 
-```text
+```
 CREATE TABLE IF NOT EXISTS 'springdemodb'. users (
 'username' VARCHAR(50) NOT NULL,
 'password' VARCHAR(50) NOT NULL,
@@ -461,7 +461,7 @@ DEFAULT CHARACTER SET = utf8
 
 In the Maven Dependencies add the JDBC driver to connect the application to the database , now to connect the application to the data source add the following Bean to the file _myDemoApp-securityConfig.xml_
 
-```text
+```
 <bean id="dataSource" class= "org.springframework.jdbc.datasource.DriverManagerDataSource" >
 <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 <property name="url" value="jdbc:mysql://localhost:3306/springdemodb" />
@@ -472,7 +472,7 @@ In the Maven Dependencies add the JDBC driver to connect the application to the 
 
 Now to create an object of the class to access the database , below the above code add the following bean
 
-```text
+```
 <bean id="myUserDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl" >
 <property name="dataSource" ref="dataSource"></property>
 </bean>
@@ -480,7 +480,7 @@ Now to create an object of the class to access the database , below the above co
 
 now with the database authentication in place remove the code for the InMemory authentication
 
-```text
+```
 <security:authentication-provider>
 <security:user-service>
 <security:user name="ANDY" password="1234567" authorities="ROLE_USER" />
@@ -491,7 +491,7 @@ now with the database authentication in place remove the code for the InMemory a
 
 and replace with the below mentioned authentication provider
 
-```text
+```
 <security:authentication-provider user-service-ref="myUserDetailsService" />
 ```
 
@@ -501,7 +501,7 @@ Now restart the application the login form will authenticate the user using the 
 
 Delete the bean object code
 
-```text
+```
 <bean id="myUserDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl" >
 <property name="dataSource" ref="dataSource"></property>
 </bean>
@@ -509,13 +509,13 @@ Delete the bean object code
 
 In the authentication manager tag delete the following authentication manager
 
-```text
+```
 <security:authentication-provider user-service-ref="myUserDetailsService" />
 ```
 
-_Next enters the following code below the code statement '&lt;security:authentication-manager&gt;':_
+_Next enters the following code below the code statement '\<security:authentication-manager>':_
 
-```text
+```
 <security: authentication-provider>
 <security:jdbc-user-service data-source-ref="dataSource"/>
 </security:authentication-provider>
@@ -529,11 +529,11 @@ It save the implementation of creating the database authentication object and ab
 
 * _MD5 org.springframework.security.authentication.encoding.Md5PasswordEncoder;_
 * _SHA org.springframework.security.authentication.encoding.ShaPasswordEncoder;_
-* _BCrypt \(recommended\) org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;_
+* _BCrypt (recommended) org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;_
 
 ### Authentication Provider
 
-```text
+```
 Authentication Provider
 Set up password encoder
 <security:password-encoder hash="bcrypt" />
@@ -541,9 +541,9 @@ Set up password encoder
 
 ## Woring with MD5
 
-Create a java class to work wit password hashing \(PasswordDemo.java\)
+Create a java class to work wit password hashing (PasswordDemo.java)
 
-```text
+```
 package com.demo.assets;
 import org.springframework.stereotype.Component;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
@@ -564,7 +564,7 @@ return encrypted;
 
 Now app.demo method to run the program
 
-```text
+```
 import org.springframework.context.ApplicationContext;
 public class AppDemo {
 public static void main(String[ ] args) {
@@ -581,7 +581,7 @@ ApplicationContext appContext = new ClassPathXmlApplicationContext("com/
 
 Java class to encode the function
 
-```text
+```
 package com.demo.assets;
 
 import org.springframework.security.authentication.encoding.Md5PasswordEncode
@@ -609,7 +609,7 @@ return encrypted;
 
 Appdemo class
 
-```text
+```
 import org.springframework.context.ApplicationContext;
 
 public class AppDemo {
@@ -633,4 +633,3 @@ PasswordDemo demo = appContext.getBean("passwordDemo",PasswordDemo.cl
 Notes for Learning
 
 ![](https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/35732943)
-
