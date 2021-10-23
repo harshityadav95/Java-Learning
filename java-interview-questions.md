@@ -81,3 +81,54 @@ without wasting any more of your time, here is my list of frequently asked Objec
 64. **What is the difference between Association, Aggregation, and Composition in OOP? (**[**answer**](http://javarevisited.blogspot.com/2014/02/ifference-between-association-vs-composition-vs-aggregation.html)**)**
 65. What is the difference between Decorator, Proxy, and Adapter patterns in Java?\*\* ([answer](http://javarevisited.blogspot.com/2015/01/adapter-vs-decorator-vs-facade-vs-proxy-pattern-java.html))
 66. **What is the difference between Composition and Inheritance in OOP?\*\* (**[**answer**](http://javarevisited.blogspot.sg/2015/06/difference-between-inheritance-and-Composition-in-Java-OOP.html)**)**
+
+
+
+### Basics : <a href="2581" id="2581"></a>
+
+1. What are JDK, JRE, and JVM?
+2. Explain Abstraction and Encapsulation?
+3. What is Inheritance, Aggregation, and Association?
+4. What is a try-with resource in java?
+5. Explain different J[ava 8 features](https://ds73306.medium.com/important-java-8-features-e52c8d8e8662)?
+6. Why is String immutable in Java?
+7. Explain the JVM memory model?
+8. Explain Garbage Collection?
+9. What are exceptions and what is exception handling?
+10. Explain Autoboxing and Unboxing?
+11. What is Typecasting? Explain with Parent-Child inheritance example.
+12. Why is the Java platform independent?
+13. How many ways can we create objects in java?
+14. What is the Collections framework?
+15. Explain static, this, and super keyword?
+16. Explain finally, finalize and final keyword?
+
+### Advanced : <a href="0cb6" id="0cb6"></a>
+
+1. What is Serialization?
+2. Explain the Internal working of a HashMap? ([answer](https://www.java67.com/2013/06/how-get-method-of-hashmap-or-hashtable-works-internally.html))
+3. What is Concurrent HashMap? ([answer](https://javarevisited.blogspot.com/2020/09/10-examples-of-concurrenthashmap-in-java.html))
+4. Difference between ArrayList and LinkedList. ([answer](https://www.java67.com/2012/12/difference-between-arraylist-vs-LinkedList-java.html))
+5. Difference between Comparator and Comparable.
+6. What is the default size of ArrayList and HashMap?
+7. What are Marker Interfaces and Functional Interfaces?
+8. Explain Classloading in java and types of classloaders?
+9. What are Generics in Java?
+10. How can we create a custom Exception?
+11. What is the Covariant return type? ([answer](https://javarevisited.blogspot.com/2014/03/covariant-method-overriding-of-java-5.html))
+12. What is Threading?
+13. What are Daemon threads?
+14. Difference between start() and run() ? ([answer](https://www.java67.com/2015/12/difference-between-thread-start-and-run-method-java.html))
+15. What is the Volatile keyword?
+16. Difference between Synchronized method and block?
+17. Difference between sleep(), wait () , yeild() ?
+18. What do you mean by Deadlock?
+19. Explain Join()?
+20. What are ThreadLocal and Threadpool?
+21. Explain hashcode() and equals() .Explain with example of HashSet.
+22. What is the immutable class? How can you make a class immutable?
+23. What is Singleton?
+24. Difference between classNotFound and NoClassDefinitionFound? ([answer](https://javarevisited.blogspot.com/2011/07/classnotfoundexception-vs.html#axzz6H3LuQtU5))
+25. What is Consumer, Predicate, Supplier?
+26. Difference between map() and flatMap() ? ([answer](https://javarevisited.blogspot.com/2016/03/difference-between-map-and-flatmap-in-java8.html))
+27. Example to sort a map to get highest occurring character using stream API.
