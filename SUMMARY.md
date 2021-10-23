@@ -14,6 +14,7 @@
 ## JAVA Language
 
 * [History and Evolution of Java](java-language/untitled-1.md)
+* [Java Architecture](java-language/java-architecture.md)
 * [0. Naming Convention](java-language/0.-naming-convention.md)
 * [1. Hello World in Java](java-language/hello-world-in-java.md)
 * [2. User Input](java-language/2.-user-input.md)
