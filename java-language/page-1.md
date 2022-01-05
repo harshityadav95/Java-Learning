@@ -1,6 +1,6 @@
 # Page 1
 
-## Use Correct Naming Conventions <a href="516c" id="516c"></a>
+## Use Correct Naming Conventions <a href="#516c" id="516c"></a>
 
 > _If you know what something does, you got a pretty good chance of guessing the name of the Spring class or interface for it._
 
@@ -20,7 +20,7 @@ As you can see from the preceding example,
 
 So, instead of filling your code with meaningless names, use meaningful names that will make it easier for your fellow developers, quality assurance engineers, or even yourself to understand the code in the future.
 
-## Minimize Using the “+” Operator for String Concatenation <a href="a27f" id="a27f"></a>
+## Minimize Using the “+” Operator for String Concatenation <a href="#a27f" id="a27f"></a>
 
 Using the “+” operator in Java to concatenate Strings is a common practice among many developers, including myself. However, when concatenating multiple Strings, the “+” operator is inefficient because the Java compiler creates multiple intermediate String objects before creating the final concatenated string.
 
@@ -36,7 +36,7 @@ You can learn how to use `StringBuilder` and `StringBuffer` from my below articl
 
 
 
-## Avoid Object Mutability <a href="a0ab" id="a0ab"></a>
+## Avoid Object Mutability <a href="#a0ab" id="a0ab"></a>
 
 The object state and variable values of mutable objects can be changed during their lifecycle. Because many variables can point to the same instance, tracking when and where the object state changed may become difficult. This is a compelling reason to avoid mutable objects whenever possible.
 
@@ -44,7 +44,7 @@ Immutable objects, on the other hand, do not change their internal state over ti
 
 The most basic way to achieve immutability is to make all mutable fields `private` and `final`, so that they cannot be iterated once they are initialized. The Spring framework allows you to keep objects immutable by using the `constructor` dependency injection model.
 
-## Logging <a href="9538" id="9538"></a>
+## Logging <a href="#9538" id="9538"></a>
 
 The importance of logging in development, and particularly in maintenance, cannot be overstated. Any Java developer who has ever done production code debugging has wished for more logs at some point.
 
@@ -62,7 +62,7 @@ Let’s look at an example of proper descriptive logging.
 logger.info(String.format(“A new user has been created with userId: %s”, userId));
 ```
 
-## Always Check for Parameter Preconditions <a href="8420" id="8420"></a>
+## Always Check for Parameter Preconditions <a href="#8420" id="8420"></a>
 
 You must always validate the input parameters of your public methods before executing any logic to ensure fail tolerance. Java assertions are the best way to validate method parameters. In the following example, if the age is less than zero, an `AssertionError` is thrown.
 
@@ -76,7 +76,7 @@ Another option is to use Google Guava, where the `Preconditions` class can be us
 
 
 
-## Avoid Empty Catch Blocks <a href="96a5" id="96a5"></a>
+## Avoid Empty Catch Blocks <a href="#96a5" id="96a5"></a>
 
 Writing a proper and meaningful message in the catch block while handling exceptions is a Java best practice preferred by elite developers. Newbie developers frequently leave catch blocks empty at first because they are the only ones working on the code. However, when an exception is caught by an empty catch block, the program does not show anything, making debugging a nightmare.
 
@@ -90,13 +90,13 @@ try {                    doSomeWork();        } catch (NullPointerException e) {
 
 In the example, we log the stack trace and return a non-revealing response to prevent attackers from seeing the stack trace.
 
-## Avoid Redundant Initialization <a href="ca15" id="ca15"></a>
+## Avoid Redundant Initialization <a href="#ca15" id="ca15"></a>
 
 > It is unnecessary and redundant to explicitly set values to 0, false, or null for any fields or array components.
 
 By default, Java sets the values of fields or array components to the values listed above. This feature was specifically included in Java to reduce repetitive coding, so we should take advantage of it.
 
-## Float or Double? <a href="372c" id="372c"></a>
+## Float or Double? <a href="#372c" id="372c"></a>
 
 Inexperienced developers frequently use float and double in inappropriate contexts. They usually only go for one type, regardless of the requirement. The use of float or double should be determined by the requirements.
 
@@ -106,7 +106,7 @@ When precision is not a concern, you can use float instead of double because it 
 
 Remember that using the appropriate data type will improve the performance of your code.
 
-## Best Way to Check Oddity <a href="b123" id="b123"></a>
+## Best Way to Check Oddity <a href="#b123" id="b123"></a>
 
 I’ve seen many developers use `i % 2 == 1` right away to see if a number is odd or not, which is incorrect. This is due to the fact that it is only valid for positive numbers. So the following method is the correct way to check the oddity of a positive and negative number in Java.
 
@@ -120,7 +120,7 @@ Even though this is correct, it is not the best Java practice. Because the bitwi
 public boolean isOdd(int num) {   return (num & 1) != 0;}
 ```
 
-## Avoiding Memory Leaks <a href="a1db" id="a1db"></a>
+## Avoiding Memory Leaks <a href="#a1db" id="a1db"></a>
 
 Although Java manages memory automatically and avoids most memory leaks, memory leaks can and will occur if proper practices are not followed. Some best practices for avoiding memory leaks while coding include always releasing database connections after querying is complete, using the finally block as often as possible, avoiding inner classes, and releasing instances stored in Static Tables.
 
@@ -128,7 +128,7 @@ There are also numerous tools available to help you detect memory leaks in your 
 
 * The [Memory tab in IntelliJ IDEA](https://www.jetbrains.com/help/idea/analyze-objects-in-the-jvm-heap.html) allows you to view details of all objects in the heap, which will assist you in detecting memory leaks and their causes. In IntelliJ, you can also use the Profiler tool window to capture [memory snapshots](https://www.jetbrains.com/help/idea/analyze-hprof-memory-snapshots.html) of running processes and analyze them for leaks.
 * The [Memory Analyzer (MAT)](https://www.eclipse.org/mat/) in Eclipse allows you to examine the Java heap for memory leaks and to reduce memory consumption. You can easily analyze heap dumps, even if they contain millions of objects, and view the sizes of each object.
-* [NetBeans Profiler](https://netbeans.apache.org/kb/docs/java/profiler-intro.html)** **can be used to analyze memory usage in Java SE, Java FX, EJB, mobile applications, and Web applications.
+* [NetBeans Profiler](https://netbeans.apache.org/kb/docs/java/profiler-intro.html) **** can be used to analyze memory usage in Java SE, Java FX, EJB, mobile applications, and Web applications.
 * Aside from that, you can use the [Java Flight Recorder](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/memleaks001.html) tool or the open-source [VisualVM](https://visualvm.github.io) tool to debug memory leaks in your app.
 
 Memory leaks in your application can significantly degrade performance, so make sure to avoid them by following the best practices listed above.

@@ -1,6 +1,6 @@
 # Java Libraries
 
-## _**1) Project Lombok**_ <a href="7694" id="7694"></a>
+## _**1) Project Lombok**_ <a href="#7694" id="7694"></a>
 
 Tired of files that only have boilerplate methods like getters, setters, constructors, overridden equals methods, etc? Well, then Lombok is for you. Most IDE’s can auto-generate getter and setter methods with just 1 click of a button, but the difference is that IDE generates those methods in the java file itself and Lombok generates all methods directly to the class file. That's not only it, Lombok helps us to remove other boilerplate code also. Let's understand that better with some examples.
 
@@ -30,7 +30,7 @@ Shocked? Well, the code with Lombok doesn't have any boilerplate code and is muc
 
 Lombok can remove a lot of your boilerplate code and you can concentrate on business logic and your code will also look neater. There is much more to Lombok than we discussed in this article you can check all those cool features of the Lombok project from their official [website](https://projectlombok.org).
 
-## _**2) MapStruct**_ <a href="e4b2" id="e4b2"></a>
+## _**2) MapStruct**_ <a href="#e4b2" id="e4b2"></a>
 
 Are you using multilayered architecture for your java project? If yes then you should definitely think to use MapStruct. In multilayered architecture, all layers of your application are loosely coupled, so there will be times when you have to map your object which lives in one layer to another layer object, a common example can be when your entities that reside in the persistence layer will be mapped to DTOs in the application layer. Mapping simple POJO with another POJO can require a lot of boilerplate code. Consider below two classes, here we have to map student’s entity class with its DTO.
 
@@ -52,7 +52,7 @@ Student was a simple class with only 2 fields then also you can see we have to w
 
 Well, that's really it. You really won't have to implement this interface MapStruct will do it automatically for you. By any chance, if in the future you decide to add 1 more new field, say father name, in entity class, then you can add the same field in DTO and you really won't have to do any change in Mapper class. Co,ol no? To know more about other cool features of MapStruct please do check their official [website](https://mapstruct.org).
 
-## _**3) Guava**_ <a href="d4ac" id="d4ac"></a>
+## _**3) Guava**_ <a href="#d4ac" id="d4ac"></a>
 
 I cannot explain guava better than how it is defined in guava’s GitHub repository. So here is the definition which I have just copied from Github:
 
@@ -78,9 +78,9 @@ public void example() {    // Initialising Guava LinkedHashMap Collection    Map
 
 From the above program, you can see how easy it was with the guava to convert a map into the string and that's not it if you have any problem in java be it related to caching, concurrency, or any other domain, most of the time you will find a solution for it in guava library. To know more about the guava library don't forget to check their Github repo.
 
-## _**4) ****Feign**_ <a href="3316" id="3316"></a>
+## _**4)**** ****Feign**_ <a href="#3316" id="3316"></a>
 
-If you are working as a java developer, you would definitely have encountered situations where you have to call some REST API. There are many HTTP clients like _OkHttpClient _which can be used to call rest API’s but they usually require a lot of code which is not contributing at all to our business needs and if you are calling multiple REST APIs your code will also be duplicated. On top of HTTP client libraries, we also have wrapper libraries like RestTemplate, making our life a little easier. Sample code written with _OkHttpClient will look something like below._
+If you are working as a java developer, you would definitely have encountered situations where you have to call some REST API. There are many HTTP clients like _OkHttpClient_ which can be used to call rest API’s but they usually require a lot of code which is not contributing at all to our business needs and if you are calling multiple REST APIs your code will also be duplicated. On top of HTTP client libraries, we also have wrapper libraries like RestTemplate, making our life a little easier. Sample code written with _OkHttpClient will look something like below._
 
 ```
 OkHttpClient okHttpClient = new OkHttpClient();Request request = new Request.Builder()    .url("https://127.0.0.1/posts/1")    .build();Call call = okHttpClient.newCall(request);try (Response response = call.execute();     ResponseBody body = response.body()) {String string = body.string();  System.out.println(string);} catch (IOException e) {  throw new RuntimeException(e);}
@@ -100,6 +100,6 @@ Well in RestTemplate it's very simple, and your response is also converted into 
 
 Believe it or not, that is it. Feign will automatically generate code to call Rest API and we as developers will not need to worry about anything. If more API needs to be added we can add methods and we won't have to rewrite code to call REST API, very cool right? and feign has a lot more features we can easily change URL by changing in configuration if you want to retry some API in case of some particular error feign can easily help you do it. It is very easy to test your code if you are using feign. Check out more cool features about feign from their GitHub [repo](https://github.com/OpenFeign/feign#why-feign-and-not-x).
 
-## _**5) Hibernate**_ <a href="a02d" id="a02d"></a>
+## _**5) Hibernate**_ <a href="#a02d" id="a02d"></a>
 
 Hey, do you hate writing SQL queries in your code? Do you sometimes forget to close DB connection after running a query? then this library is just for you. When you are trying to access the database there is a lot of boilerplate code involved you have to open connection, run query, convert ResultSet to entities, and close connection, and apart from that you also have to write efficient queries. If you will use hibernate you won't have to worry about any of the above things and you can concentrate on your business rather than all these. you can learn more about hibernate from [here](https://medium.com/javarevisited/top-5-hibernate-online-training-courses-for-beginners-and-advance-java-programmers-469460596b2b).

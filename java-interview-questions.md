@@ -2,13 +2,13 @@
 
 
 
-## 66 Java OOP Concepts Interview Question and Answers <a href="27b5" id="27b5"></a>
+## 66 Java OOP Concepts Interview Question and Answers <a href="#27b5" id="27b5"></a>
 
 without wasting any more of your time, here is my list of frequently asked Object-Oriented Programming questions for Java programmers. These questions have been collected from many Java interviews, both telephonic and face-bot-face from different levels of Java programmers.
 
 1. **What is Class in Object-oriented programming? (answer)**\
    A class is a blueprint to create objects.
-2. **What is Object in OOP? **[**(answer)**](https://javarevisited.blogspot.com/2012/12/what-is-object-in-java-or-oops-example.html)\
+2. **What is Object in OOP?** [**(answer)**](https://javarevisited.blogspot.com/2012/12/what-is-object-in-java-or-oops-example.html)\
    Created from classes, represent a particular state of the class.
 3. **What is the abstraction in Java? (**[**answer**](https://javarevisited.blogspot.com/2010/10/abstraction-in-java.html#axzz6oOeSmpNw)**)**\
    An OOP technique to hide complexities from clients.
@@ -84,7 +84,7 @@ without wasting any more of your time, here is my list of frequently asked Objec
 
 
 
-### Basics : <a href="2581" id="2581"></a>
+### Basics : <a href="#2581" id="2581"></a>
 
 1. What are JDK, JRE, and JVM?
 2. Explain Abstraction and Encapsulation?
@@ -103,7 +103,7 @@ without wasting any more of your time, here is my list of frequently asked Objec
 15. Explain static, this, and super keyword?
 16. Explain finally, finalize and final keyword?
 
-### Advanced : <a href="0cb6" id="0cb6"></a>
+### Advanced : <a href="#0cb6" id="0cb6"></a>
 
 1. What is Serialization?
 2. Explain the Internal working of a HashMap? ([answer](https://www.java67.com/2013/06/how-get-method-of-hashmap-or-hashtable-works-internally.html))
