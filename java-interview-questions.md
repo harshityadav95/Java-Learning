@@ -132,3 +132,86 @@ without wasting any more of your time, here is my list of frequently asked Objec
 25. What is Consumer, Predicate, Supplier?
 26. Difference between map() and flatMap() ? ([answer](https://javarevisited.blogspot.com/2016/03/difference-between-map-and-flatmap-in-java8.html))
 27. Example to sort a map to get highest occurring character using stream API.
+
+### Java Backend Developer Interview Questions
+
+**1. What is the role of JVM?**\
+JVM is short for Java Virtual Machine. It provides a runtime environment for Java code to run in. It makes sure that Java is compiled once and runs everywhere regardless of operating systems and processors.
+
+**2. How is the compilation process of Java source code?**\
+Java source code undergoes source code development -> lexical analyzer -> syntax analyzer -> sematic analyzer -> bytecode generator.
+
+**3. What is the structure of JVM?**\
+JVM consists of mainly three subsystems: Class Loader subsystem, Runtime Data area, and Execution Engine (refer to the diagram below for detailed elaboration).
+
+![](https://miro.medium.com/max/60/1\*d3iiqc2AFfphG-fN4Xictg.png?q=20)![](https://miro.medium.com/max/1472/1\*d3iiqc2AFfphG-fN4Xictg.png)[https://dzone.com/articles/jvm-architecture-explained](https://dzone.com/articles/jvm-architecture-explained)
+
+**4. In JVM Runtime Data Area, what are the components that are shared between multiple threads?**\
+Method area is shared among threads. Heap area stores global variables, object instances, and things that could be accessed anywhere within the application. Therefore, heap area is also a shared space. The stack area which stores the methods, local variables within a thread is not shared as each thread has different methods of calling and variables. PC register tracks the command on how the thread should progress so it is independent for each thread as well. Native method stack is similar to stack area which also contains local variables and methods. So native method stack is not shared across multiple threads.
+
+**5. What are the communication methods between threads in Java?**\
+1\) Shared memory\
+volatile keyword, synchronized keyword
+
+2\) wait and notify mechanism\
+wait() and notify() are the methods of Java Object. wait() method makes object convert from running state to blocking state. Once a certain condition fulfills, another thread will call the notify() method to wake up the first thread, and let it enter a runnable state.
+
+3\) Lock/Condition mechanism\
+Lock is class provided by Java to limit access to an object. Condition is invoked by Lock class. One lock can create multiple conditions. Using Condition.await() and Condition.signal() methods, we can put a thread to sleep or wake up a thread to do its work.
+
+**6. What are volatile and synchronized keywords?**\
+Volatile keyword targets at a field, or a variable in a method, such that when multiple threads access the same variable, data consistency is ensured. This is done by forcing the variable to be accessed through main memory instead of cache memory.
+
+Synchronized keyword is used for a block of code. It allows only one thread to access the resources at a given point of time. When one thread is manipulating the resources, other threads who want to access the same object are not allowed to execute.
+
+**7. What are the differences between volatile and synchronized?**\
+Volatile is a lightweight lock whereas synchronized is a heavyweight lock. After synchronized block is writing/modifying the resource, the variable value is flushed back to the shared memory space. This causes concurrency issue as threads on the same object protected by synchronization can’t execute concurrently. In contrast, volatile allows concurrent executions from multiple threads by forcing them to read the variable from main memory directly instead of CPU cache. Moreover, synchronized is implemented based on operating system which causes the thread to fall into the kernel mode instead of user mode which is a time-consuming process.
+
+**8. What is the use of ThreadLocal?**\
+ThreadLocal is a mechanism to ensure thread safety. It allows developer to store variables pertaining to a particular thread so that multiple threads do not need to access shared variables, causing hazard to data consistency.\
+Each _Thread_ class has a field called _threadLocals_ of type _ThreadLocal.ThreadLocalMap_. The key for _threadLocals_ is the reference to the current ThreadLocal and the value is the variable developer wants to store (of class type T). To write to or read from the variable, ThreadLocal.get() or set() method are called.
+
+**9. What is reflection in Java?**\
+Java is a static language. Reflection in Java gives the program ability to introspect itself, making it more dynamic. It allows developer to examine or modify the behavior of methods, classes or interfaces at runtime.
+
+**10. Why is HashMap thread-unsafe?**\
+1\) Multiple puts from multiple threads may cause the loss of the element\
+2\) When put and get execute concurrently, the return value for get may be null. This happens when a thread puts an element which exceeds threshold, leading to a rehash operation, a get method will lead to null value.\
+3\) Concurrent put in jdk1.7 may lead to circular linked list which causes infinite loop in get.\
+To make sure thread-safety, use ConcurrentHashMap instead.
+
+**11. What are the differences between thread and process?**\
+Thread is a small unit within a process. A process can have multiple threads. A process is an executing program but a thread is a part of the program. Each process has its own address space which multiple threads within that process share. A process is a heavyweight task but a thread is a lightweight task.
+
+**12. Explain what is ReentrantLock?**\
+ReentrantLock is a lock where a process can claim the lock multiple times without blocking on itself. If a lock is non-reentrant, when you grab it the second time, you will be blocked by yourself which effectively causes a deadlock.
+
+**13. Explain what is ThreadPool and how does it benefit an application?**\
+Creating and starting a thread can be an expensive process in JVM. By repeating this process every time we need to execute a task, we’re incurring a significant performance cost. A thread pool in Java encompasses a number of threads that are executed when needed and returned to the pool after execution for reuse later. A threadpool consists of the pool of worker threads, a thread factory producing new threads, and a queue of tasks to be executed. A threadpool helps to improve the performance of the application.
+
+**14. What is the process of loading a Java class?**\
+1\) Load the bytecode file\
+2\) Verify whether the bytecode is machine safe\
+3\) Prepare memory for local variables, initial values in the method area\
+4\) Resolve the symbol references in the constant pool to direct references\
+5\) Initialize the class by executing the class source code
+
+**15. What are the differences between Array and ArrayList in Java?**\
+Array only contains the same type of value whereas ArrayList can contain different types of values. Array size must be specified in the declaration whereas ArrayList size can be dynamically changed. Array can contain primitive data types such as int, byte, char, but ArrayList can only contain objects.
+
+**16. How many bytes does an object take in Java?**\
+The minimum object size is 16 bytes for modern 64-bit JDK since the object has a 12-byte header, padded to a multiple of 8 bytes.
+
+**17. What are the differences between optimistic and pessimistic locks?**\
+Optimistic lock implements CAS algorithm (Compare-And-Swap). Before it updates the new value to the target resource, it will check if the target value matches the expected value it retrieved earlier. If match, no threads have modified it and it proceeds to change the target value to the new value. If not, it will read the target value again and perform CAS until finishing with the update.
+
+Pessimistic lock means the thread will lock the resource for exclusive use such that other threads are unable to access it at the same time. Synchronized keyword is a pessimistic lock. Compared to optimistic lock, the level of concurrency is reduced.
+
+**18. Is optimistic lock always better?**\
+Depends on the situation. If multiple threads are waiting to fetch the state of the object, it will cause high occupancy on the CPU. CAS algorithm has another pitfall where when the target value changes from “A” to “B” then to “A”, the lock will treat it as no change. One solution is to use version control on the target value.
+
+**19. What are wrapper classes in Java?**\
+Wrapper classes change primitive data types such as int, char, double to object classes Integer, Character, Double.
+
+**20. What are the overloading and overriding?**\
+Overloading means multiple methods have the same name but the number of arguments is different or the types of arguments are different. It is a compile-time polymorphism. Overriding occurs when a subclass inherits from the parent class, it would like to change the behavior of one of the parent methods but persists the number and type of arguments and return type. It is a run-time polymorphism.
